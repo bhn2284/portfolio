@@ -25,24 +25,26 @@ h2{
 
 .home{
     h1{
-        font-size:120px;
+        font-size:130px;
         color:$dark-blue;
         // -webkit-text-stroke:1px #fff; 
-        // text-shadow:1px 1px 10px #fff;
+        text-shadow:1px 1px 50px #fff;
         font-family: 'Noto Snas KR', sans-serif;
         font-weight:bold;
-        text-align:left;
         position:absolute;
+        bottom:200px;
+        z-index:1;
         text-transform: uppercase;
-        top:20%;
     }
     p{
-        font-size:40px;
-        color:#ddd;
+        font-size:38px;
+        color:#fff;
         font-family: 'Oleo Script',sans-serif;
+        font-style: italic;
         text-align: left;
         position:absolute;
-        top:60%;
+        top:27%;
+        left:55%;
     }
 }
 .logo{
@@ -136,7 +138,10 @@ h2{
         font-weight:bold;
         li{
             width:15%;
-            a{display: block;}
+            &.on{
+                a{color:#fff;}
+            }
+            a{display: block; transition: .3s}
         }
     }
     .view{
@@ -145,14 +150,44 @@ h2{
             padding:80px;
             width:100%;
             height:580px;
-            h3,p{font-weight:bold;}
+            position:absolute;
+            top:0; left:0;
+            display:none;
+            transition: display .3s;
+            &.on{display: block;}
+            .list{display:flex; flex-direction:row; line-height:30px}
+            h3,h4{font-weight:bold;}
             h3{font-size:30px; margin-bottom:30px;}
-            p{font-size:16px; line-height:30px;}
-            .view-btn{font-weight:800; display:block; text-transform: uppercase; color:$dark-blue; background:#fff; border:2px solid $dark-blue; border-radius:5px; height:45px; font-size:16px; width:140px; text-align:center; line-height:45px; margin-top:50px;}
+            h4{color:$dark-blue; font-size:18px; width:100px;}
+            p{
+                font-size:16px;
+                width:420px;
+                &.list-p{margin-top:20px; line-height:30px; word-break: keep-all;}
+            }
+            .view-btn{
+                font-weight:800;
+                font-family:'Noto Snas KR'; 
+                display:block; 
+                text-transform: uppercase; 
+                color:$dark-blue;
+                border:2px solid $dark-blue; 
+                border-radius:5px; 
+                height:45px; 
+                font-size:16px; 
+                width:140px; 
+                text-align:center;
+                line-height:45px;
+                margin-top:50px;
+                transition:.3s;
+                &:hover{background:$dark-blue; color:#fff;}
+            }
             .moniter{
-                position:absolute; top:80px; right:80px; box-shadow:1px 1px 10px #000;
+                position:absolute; top:80px; right:80px; box-shadow:0px 0px 10px #000;
                 .website{
-                    a{display: block; position:relative; width:600px; height:350px; overflow: hidden;}
+                    a{display: block; position:relative; width:580px; height:350px; overflow: hidden;}
+                }
+                .mobile{
+                    a{display:block; position:relative; width:360px; height:500px; background:#fff; overflow: hidden;}
                 }
             }
         }

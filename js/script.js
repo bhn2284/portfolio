@@ -24,3 +24,13 @@ $(window).scroll(function(){
         }
     });
 });
+
+// project tab menu
+$('.name li').click(function(e){
+    e.preventDefault();
+    var idx=$(this).index();
+    $('.name li').removeClass('on');
+    $('.name li').eq(idx).addClass('on');
+    $('.view li').hide();
+    $('.view li').eq(idx).show();
+});
