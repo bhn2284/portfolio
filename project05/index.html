@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name='Title' content='oryany'>
+	<meta name='Subject' content='oryany'>
+	<meta name='Keywords' content='oryany, 오야니, 모바일, 리디자인, 적응형'>
+	<meta name='Author' content='hanna'>
+	<meta name='Publisher' content='hanna'>
+	<meta name='Description' content='오야니 모바일 리디자인, 적응형'>
+	<meta name='Author-Date' content='2021-06-28'>
+    <title>ORYANY | 오야니</title>
+    <style>
+        body{height:100vh; background-color: rgb(226, 251, 255); margin:0; padding:0}
+        .phone{width:530px; height:960px; position:absolute; left:50%; top:50%; transform: translate(-50%,-50%); background:url(iphone8.png) no-repeat;}
+        .content{width:375px; height:662px; position:absolute; left:78px; top:149px; background-color: rgba(255,255,255); overflow:hidden;}
+        iframe{width:100%; height:100%;}
+    </style>
+</head>
+<body>
+    <div class="phone">
+        <div class="content">
+            <iframe src="mobile/index.html" frameborder="0"></iframe>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+        <script>
+            if(Modernizr.touchevents){
+                location.href="./mobile/index.html";
+            }
+        </script>
+    </div>
+</body>
+</html>

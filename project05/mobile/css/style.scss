@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+.container{height:inherit; width:351px; margin:0 auto; position:relative;}
+.tit{font-size:12px; font-weight:700; letter-spacing: 3px; text-align: center; text-transform: uppercase;}
+header{height:70px;}
+footer{background:#272727; height:160px; padding-bottom:50px;}
+#topMenu{
+    width:100%; 
+    height:70px; 
+    background:#272727; 
+    position: fixed;
+    top:0;
+    left:0;
+    z-index:500;
+    .category-bar{float:left; width:25px; margin-top:25px}
+    .logo{
+        position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+        a{display:block; width:104px; height:25px; background: url(../img/logo.png) no-repeat;}
+    }
+    .right{
+        float:right; padding-top:22px;
+        .search-btn,.basket-btn,.back-btn{display: inline-block;}
+        .basket-btn{margin-left:10px;}
+    }
+    
+}
+#bottomMenu{
+    width:100%;
+    height:50px;
+    background:#fff;
+    position:fixed; 
+    bottom:0;
+    left:0;
+    z-index:500;
+    padding:5px 0;
+    box-shadow: 0 1px 4px;
+    .menu{
+        display: flex; 
+        justify-content: space-around;
+        height:39px;
+        li{
+            a{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                span{display: block; height:14px; position:absolute; top:30px; font-size:10px; color:#aaa;} 
+                @each $c in home,cate,basket,favorite,mypage {
+                    &.on span{color:#B53572}
+                    &.on img{content: url(../img/#{$c}_on.png);}
+                }
+            }
+        }
+    }
+}
+
+.banner{width:100%; height:405px; background:url(../img/banner.png) no-repeat center;}
+.best-seller{
+    margin-top:30px;
+    .product{
+        margin-top:20px;
+        .swiper-container{position:relative;}
+        .swiper-slide{
+            width:120px; 
+            height:153px;
+            @for $i from 1 to 5{
+                .swiper#{$i}{background:url(../img/swiper#{$i}.png) no-repeat;}
+            }
+            a{display: flex; align-items: center; flex-direction: column; height:153px;}
+            span{display:block; font-size:10px; letter-spacing: -.3px; position:absolute; bottom:0; text-align: center;}
+        }
+    }
+}
+
+.new-arrivals{
+    margin-top:50px;
+    height:220px;
+    .tab-menu{
+        margin-top:15px;
+        width:100%;
+        text-align: center;
+        .tabs{
+            overflow: hidden; padding-bottom:24px;
+            li{
+                display: inline-block;
+                &:not(:last-child){margin-right:20px;}
+                a{
+                    display: block; text-transform: uppercase; font-size:10px; color:#aaa; position:relative;
+                    &.on{
+                        color:#000; font-weight:700;
+                        &::before{content:''; width:100%; height:1px; position:absolute; left:0; top:0; background-color: #000;}
+                    }
+                }
+            }
+        }
+        .product{
+            ul{
+                position:absolute; 
+                top: 70px; left:0;
+                overflow: hidden;
+                li{
+                    float:left; 
+                    width:110px;
+                    &:not(:last-child){margin-right:9px;}
+                }
+            }
+            @each $n in bag, clothes, shoes{
+                @for $t from 1 to 4{
+                    &.#{$n} li:nth-child(#{$t}) a{
+                        background: url(../img/tab-#{$n}#{$t}.png)no-repeat;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        height:148px;
+                        span{display:block; font-size:10px; letter-spacing: -.3px; position:absolute; bottom:0;}
+                    }
+                }
+            } 
+        }
+    }
+}
+.brand{
+    margin:50px 0 40px 0;
+    ul{
+        padding-top:50px;
+        overflow: hidden;
+        li{
+            float: left;
+            width:49%;
+            &:last-child{float:right;}
+            a{display: block; text-align: center; font-size:10px;}
+        }
+    }
+}
+.foot-logo{display: block; width:65px; margin:0 auto; padding-top:20px;}
+.company{
+    margin-top:10px;
+    text-align:center;
+    p{
+        color:#fff; 
+        font-size:10px;
+        padding-bottom:8px;
+    }
+    ul{
+        margin-top:5px;
+        li{
+            display: inline-block;
+            a{
+                color:#fff; 
+                font-size:10px;
+                &.bold{font-weight:bold;}
+            }
+         }
+    }
+    .sns{
+        ul{
+            li{
+                display: inline-block;
+                &:not(:last-child){margin-right:15px;}
+                a{display: block;}
+            }
+        }
+    }
+}
+.copyright{color:rgba(255,255,255,.6); font-size:10px; text-align:center; margin-top:6px;}

@@ -46,13 +46,14 @@
 
 #contact {
   position: relative;
-  height: 90vh;
+  height: 95vh;
+  overflow: hidden;
 }
 
 #footer {
   position: relative;
-  height: 10vh;
-  background: #6b462e;
+  height: 5vh;
+  background: #002363;
 }
 
 .container {
@@ -67,30 +68,8 @@ h2 {
   color: #425a73;
   font-weight: 800;
   text-align: center;
-  padding-top: 40px;
-}
-
-.home h1 {
-  font-size: 130px;
-  color: #002363;
-  text-shadow: 1px 1px 50px #fff;
-  font-family: 'Noto Snas KR', sans-serif;
-  font-weight: bold;
-  position: absolute;
-  bottom: 200px;
-  z-index: 1;
-  text-transform: uppercase;
-}
-
-.home p {
-  font-size: 38px;
-  color: #fff;
-  font-family: 'Oleo Script',sans-serif;
-  font-style: italic;
-  text-align: left;
-  position: absolute;
-  top: 27%;
-  left: 55%;
+  font-family: 'Oleo Script';
+  padding: 40px 0 50px 0;
 }
 
 .logo {
@@ -102,6 +81,10 @@ h2 {
 
 .logo a {
   display: block;
+  font-family: 'Oleo Script';
+  font-size: 25px;
+  color: #fff;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .gnb-menu {
@@ -132,8 +115,8 @@ h2 {
           writing-mode: vertical-rl;
   line-height: 120px;
   font-size: 18px;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: letter-spacing .3s;
+  transition: letter-spacing .3s;
 }
 
 .gnb-menu .gnb li.on, .gnb-menu .gnb li:hover {
@@ -142,12 +125,37 @@ h2 {
 
 .gnb-menu .gnb li.on a, .gnb-menu .gnb li:hover a {
   color: white;
-  text-shadow: 1px 1px 10px #002363;
+  text-shadow: 1px 1px 10px #000;
 }
 
 .gnb-menu .gnb li a {
   color: #002363;
   font-weight: bold;
+}
+
+.home h1 {
+  font-size: 130px;
+  color: #014477;
+  text-shadow: 1px 1px 50px #fff;
+  font-family: 'Kaushan Script', sans-serif;
+  font-weight: 800;
+  position: absolute;
+  bottom: 200px;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+}
+
+.home p {
+  font-size: 38px;
+  color: rgba(255, 255, 255, 0.9);
+  font-family: 'Oleo Script',sans-serif;
+  text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  font-style: italic;
+  text-align: left;
+  position: absolute;
+  top: 27%;
+  left: 55%;
 }
 
 .about .center {
@@ -161,7 +169,6 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin-top: 50px;
   border: 2px solid #fff;
   -webkit-box-shadow: 0 0 50px #fff;
           box-shadow: 0 0 50px #fff;
@@ -243,8 +250,8 @@ h2 {
   padding-top: 10px;
 }
 
-.project .project-wrap {
-  padding-top: 50px;
+.about .center .content .skills ul li img {
+  width: 80%;
 }
 
 .project .name {
@@ -261,6 +268,7 @@ h2 {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .project .name li {
@@ -289,8 +297,6 @@ h2 {
   top: 0;
   left: 0;
   display: none;
-  -webkit-transition: display .3s;
-  transition: display .3s;
 }
 
 .project .view li.on {
@@ -336,7 +342,6 @@ h2 {
 
 .project .view li .view-btn {
   font-weight: 800;
-  font-family: 'Noto Snas KR';
   display: block;
   text-transform: uppercase;
   color: #002363;
@@ -347,7 +352,7 @@ h2 {
   width: 140px;
   text-align: center;
   line-height: 45px;
-  margin-top: 50px;
+  margin-top: 20px;
   -webkit-transition: .3s;
   transition: .3s;
 }
@@ -361,24 +366,145 @@ h2 {
   position: absolute;
   top: 80px;
   right: 80px;
-  -webkit-box-shadow: 0px 0px 10px #000;
-          box-shadow: 0px 0px 10px #000;
 }
 
 .project .view li .moniter .website a {
   display: block;
   position: relative;
-  width: 580px;
-  height: 350px;
+  width: 30vw;
+  height: 20vh;
+  min-width: 450px;
+  min-height: 380px;
   overflow: hidden;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
-.project .view li .moniter .mobile a {
-  display: block;
+.contact .fish {
+  background-image: url(../img/fish.png);
+  width: 235px;
+  height: 104px;
+  margin-left: -235px;
+  position: absolute;
+  -webkit-animation: fish 24s infinite linear;
+          animation: fish 24s infinite linear;
+}
+
+.contact .fish.fish1 {
+  top: 40%;
+}
+
+.contact .fish.fish2 {
+  top: 75%;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+.contact form {
+  margin: 0 auto;
+  width: 500px;
+  color: white;
   position: relative;
-  width: 360px;
-  height: 500px;
-  background: #fff;
-  overflow: hidden;
+}
+
+.contact form label {
+  font-size: 18px;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.contact form input, .contact form textarea {
+  width: 500px;
+  border-radius: 20px;
+  outline: none;
+  padding: 10px;
+  margin: 10px 0;
+  color: #676767;
+  border: solid 3px #fff;
+  -webkit-transition: border 0.5s;
+  transition: border 0.5s;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+  border: 3px solid #77bde0;
+}
+
+.contact form textarea {
+  height: 100px;
+  resize: none;
+  overflow: auto;
+}
+
+.contact form input[type="submit"] {
+  background-color: #ffae00;
+  color: white;
+  height: 50px;
+  cursor: pointer;
+  margin-top: 30px;
+  font-size: 20px;
+  -webkit-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.contact form input[type="submit"]:hover {
+  background-color: #db8a0f;
+}
+
+.contact form .formgroup-error {
+  color: red;
+  font-weight: bold;
+}
+
+@-webkit-keyframes fish {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes fish {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+.footer {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer p {
+  color: #fff;
+  font-size: 16px;
 }
 /*# sourceMappingURL=style.css.map */

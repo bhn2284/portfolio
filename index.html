@@ -16,13 +16,12 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- 폰트 -->
     <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
-    <link href="https://fonts.googleapis.com/css2?family=Castoro&family=Montserrat:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="js/script.js" defer></script>
     <script src="js/background.js" defer></script>
+    <script src="js/form.js" defer></script>
 </head>
 <body>
     <div id="skip">
@@ -35,7 +34,7 @@
     </div>
     <div id="wrap">
         <header id="header">
-            <h1 class="logo"><a href="index.html"><span class="ir_pm">Hanna's Portfolio</span><img src="img/logo.png" alt="Hanna's Portfolio"></a></h1>
+            <h1 class="logo"><a href="index.html">Hanna's Portfolio</a></h1>
             <div class="gnb-menu">
                 <ul class="gnb">
                     <li class="on"><a href="#home">HOME</a></li>
@@ -94,114 +93,156 @@
             <section id="project" class="project">
                 <div class="container">
                     <h2>PROJECT</h2>
-                    <div class="project-wrap">
-                        <ul class="name cf">
-                            <li class="on"><a href="#">시흥시청</a></li>
-                            <li><a href="#">투썸플레이스</a></li>
-                            <li><a href="#">킹콩치과</a></li>
-                            <li><a href="#">오야니</a></li>
-                            <li><a href="#">PORTFOLIO</a></li>
-                        </ul>
-                        <ul class="view">
-                            <li class="on">
-                                <h3>시흥시청</h3>
-                                <div class="list">
-                                    <h4>구분</h4><p>Desktop</p>
+                    <ul class="name cf">
+                        <li class="on"><a href="#">시흥시청</a></li>
+                        <li><a href="#">투썸플레이스</a></li>
+                        <li><a href="#">킹콩치과</a></li>
+                        <li><a href="#">오야니</a></li>
+                        <li><a href="#">PORTFOLIO</a></li>
+                    </ul>
+                    <ul class="view">
+                        <li class="on">
+                            <h3>시흥시청</h3>
+                            <div class="list">
+                                <h4>구분</h4><p>Desktop</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작기간</h4><p>2개월</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작영역</h4><p>메인 페이지 1, 서브 페이지 6, 로그인 페이지 1</p>
+                            </div>
+                            <div class="list">
+                                <h4>기여도</h4><p>퍼블리싱 100%</p>
+                            </div>
+                            <p class="list-p">기존 홈페이지를 클론 코딩하였고 jQuery를 사용하여 추가적인 기능을 적용했습니다. <br>메인페이지와 참여소통, 종합민원, 열린행정, 시정소식, 시흥소개 페이지를 제작하였고 시흥소개 - 찾아오시는 길 페이지에는 카카오 지도 API를 활용하여 제작했습니다.</p>
+                            <a href="project02/index_jquery.html" class="view-btn">view site</a>
+                            <div class="moniter">
+                                <div class="website">
+                                    <a href="#"><img src="img/siheung city.png" alt="시흥시청"></a>
                                 </div>
-                                <div class="list">
-                                    <h4>제작기간</h4><p>2개월</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>투썸플레이스</h3>
+                            <div class="list">
+                                <h4>구분</h4><p>반응형 웹</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작기간</h4><p>1개월</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작영역</h4><p>메인 페이지 1</p>
+                            </div>
+                            <div class="list">
+                                <h4>기여도</h4><p>디자인 100%, 퍼블리싱 100%</p>
+                            </div>
+                            <p class="list-p">하드코딩으로 작성한 투썸플레이스 리디자인 홈페이지입니다. 다양한 디바이스를 고려해 반응형으로 제작하였고 꽉 찬 레이아웃 구조로 깔끔한 느낌을 주었습니다.</p>
+                            <a href="project03/index.html" class="view-btn">view site</a>
+                            <div class="moniter">
+                                <div class="website">
+                                    <a href="#"><img src="img/twosome.png" alt="투썸플레이스"></a>
                                 </div>
-                                <div class="list">
-                                    <h4>제작영역</h4><p>메인 페이지 1, 서브 페이지 6, 로그인 페이지 1</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>킹콩치과</h3>
+                            <div class="list">
+                                <h4>구분</h4><p>Desktop</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작기간</h4><p>일주일</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작영역</h4><p>메인 페이지 1</p>
+                            </div>
+                            <div class="list">
+                                <h4>기여도</h4><p>퍼블리싱 100%</p>
+                            </div>
+                            <p class="list-p">기존 홈페이지를 클론 코딩했으며 Swiper 플러그인을 통해 슬라이드 기능을 적용시키고 SCSS를 사용하여 제작하였습니다.</p>
+                            <a href="project04/index.html" class="view-btn">view site</a>
+                            <div class="moniter">
+                                <div class="website">
+                                    <a href="#"><img src="img/kingkong.png" alt="킹콩치과"></a>
                                 </div>
-                                <div class="list">
-                                    <h4>기여도</h4><p>퍼블리싱 100%</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>오야니</h3>
+                            <div class="list">
+                                <h4>구분</h4><p>Mobile</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작기간</h4><p>2주</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작영역</h4><p>로딩 페이지 1, 메인 페이지 1, 서브페이지 5</p>
+                            </div>
+                            <div class="list">
+                                <h4>기여도</h4><p>디자인 100%, 퍼블리싱 100%</p>
+                            </div>
+                            <p class="list-p">깔끔하고 통일성 있게 리디자인했으며 주 이용자를 고려해 둥글고 친근한 디자인과 아이콘을 사용하였습니다. Swiper 플러그인을 통해 스와이퍼 기능을 적용시키고 SCSS를 사용해 메인 페이지와 서브페이지를 제작하였습니다. PHP를 활용하여 마이페이지 - 로그인, 회원가입이 가능하도록 하였습니다.</p>
+                            <a href="project05/index.html" class="view-btn">view site</a>
+                            <div class="moniter">
+                                <div class="website">
+                                    <a href="#"><img src="img/oryany.png" alt="oryany"></a>
                                 </div>
-                                <p class="list-p">기존 홈페이지를 클론 코딩하였고 jQuery를 사용하여 추가적인 기능을 적용했습니다. <br>메인페이지와 참여소통, 종합민원, 열린행정, 시정소식, 시흥소개 페이지를 제작하였고 시흥소개 - 찾아오시는 길 페이지에는 카카오 지도 API를 사용해 지도를 적용했습니다.</p>
-                                <a href="#" class="view-btn">view site</a>
-                                <div class="moniter">
-                                    <div class="website">
-                                        <a href="#"><img src="img/siheung city.png" alt="시흥시청"></a>
-                                    </div>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Portfolio</h3>
+                            <div class="list">
+                                <h4>구분</h4><p>적응형 웹</p>
+                            </div>
+                            <div class="list">
+                                <h4>제작기간</h4><p></p>
+                            </div>
+                            <div class="list">
+                                <h4>제작영역</h4><p>메인 페이지 1</p>
+                            </div>
+                            <div class="list">
+                                <h4>기여도</h4><p>디자인 100%, 퍼블리싱 100%</p>
+                            </div>
+                            <p class="list-p">파라다이스를 주제로 개인 포트폴리오 사이트를 제작하였습니다. 메인 페이지는 홈 / 자기소개 / 프로젝트 리스트 / 연락처 4개의 영역으로 구분했으며 오른쪽 상단의 메뉴를 클릭해 원하는 페이지로 바로 이동할 수 있게 제작했습니다. 프로젝트 리스트의 경우에는 직접 완성된 사이트로 이동해 관련된 세부사항을 확인할 수 있도록 하였습니다.</p>
+                            <a href="index.html" class="view-btn">view site</a>
+                            <div class="moniter">
+                                <div class="website">
+                                    <a href="#"><img src="" alt="portfolio"></a>
                                 </div>
-                            </li>
-                            <li>
-                                <h3>투썸플레이스</h3>
-                                <div class="list">
-                                    <h4>구분</h4><p>반응형 웹</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작기간</h4><p>1개월</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작영역</h4><p>메인 페이지 1</p>
-                                </div>
-                                <div class="list">
-                                    <h4>기여도</h4><p>디자인 100%, 퍼블리싱 100%</p>
-                                </div>
-                                <p class="list-p">하드코딩으로 작성한 투썸플레이스 리디자인 홈페이지입니다. 다양한 디바이스를 고려해 반응형으로 제작하였고 꽉 찬 레이아웃 구조로 깔끔하고 시원한 느낌을 주었습니다.</p>
-                                <a href="#" class="view-btn">view site</a>
-                                <div class="moniter">
-                                    <div class="website">
-                                        <a href="#"><img src="img/twosome.png" alt="투썸플레이스"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>킹콩치과</h3>
-                                <div class="list">
-                                    <h4>구분</h4><p>Desktop</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작기간</h4><p>일주일</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작영역</h4><p>메인 페이지 1</p>
-                                </div>
-                                <div class="list">
-                                    <h4>기여도</h4><p>퍼블리싱 100%</p>
-                                </div>
-                                <p class="list-p">기존 홈페이지를 클론 코딩했으며 swiper 플러그인과 SCSS를 사용하여 제작하였습니다.</p>
-                                <a href="#" class="view-btn">view site</a>
-                                <div class="moniter">
-                                    <div class="website">
-                                        <a href="#"><img src="img/kingkong.png" alt="킹콩치과"></a>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <h3>오야니</h3>
-                                <div class="list">
-                                    <h4>구분</h4><p>Mobile</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작기간</h4><p>2주</p>
-                                </div>
-                                <div class="list">
-                                    <h4>제작영역</h4><p>로딩 페이지 1, 메인 페이지 1, 서브페이지 5</p>
-                                </div>
-                                <div class="list">
-                                    <h4>기여도</h4><p>디자인 100%, 퍼블리싱 100%</p>
-                                </div>
-                                <p class="list-p">기존 홈페이지를 클론 코딩했으며 swiper 플러그인과 SCSS를 사용하여 제작하였습니다.</p>
-                                <a href="#" class="view-btn">view site</a>
-                                <div class="moniter">
-                                    <div class="mobile">
-                                        <a href="#"><img src="img/oryany.png" alt="oryany"></a>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </section>
-            <section id="contact">
+            <section id="contact" class="contact">
+                <div class="fish fish1"></div>
+                <div class="fish fish2"></div>
                 <div class="container">
                     <h2>CONTACT</h2>
+                    <h3></h3>
+                    <form id="waterform" method="post">
+                        <div class="formgroup" id="name-form">
+                            <label for="name">Your name*</label>
+                            <input type="text" id="name" name="name"/>
+                        </div>
+                        <div class="formgroup" id="email-form">
+                            <label for="email">Your email*</label>
+                            <input type="email" id="email" name="email" />
+                        </div>
+                        <div class="formgroup" id="message-form">
+                            <label for="message">Your message</label>
+                            <textarea id="message" name="message"></textarea>
+                        </div>
+                        <input type="submit" value="Send your message" />
+                    </form>
                 </div>
             </section>
         </main>
-        <footer id="footer"></footer>
+        <footer id="footer" class="footer">
+            <a href="https://github.com/iswhereiam">GITHUB</a>
+            <p class="copy">© 2021 iswhereiam</p>
+            <p class="email">bhn2284@naver.com</p>
+        </footer>
     </div> <!--id="wrap"-->
 </body>
 </html>

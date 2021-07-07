@@ -31,6 +31,6 @@ $('.name li').click(function(e){
     var idx=$(this).index();
     $('.name li').removeClass('on');
     $('.name li').eq(idx).addClass('on');
-    $('.view li').hide();
-    $('.view li').eq(idx).show();
+    $('.view li').fadeOut(300);
+    $('.view li').eq(idx).fadeIn(300);
 });

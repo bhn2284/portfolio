@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<title>시흥시 홈페이지에 방문하신 것을 환영 합니다.</title>
+	<meta charset="UTF-8">
+	<meta name='Viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.6'>
+	<meta name='Keywords' content='시흥시청, 관공서'>
+	<meta name='Author' content='hanna'>
+	<meta name='Publisher' content='hanna'>
+	<meta name='Description' content='시흥시청 만들기'>
+	<meta name='Author-Date' content='2021-04-27'>
+	
+	<!-- 파비콘 -->
+	<link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+	
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/layout01_jquery.css"/>
+	
+	<script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+	<div id="skip">
+		<a href="#wrap">전체 메뉴 바로가기</a>
+		<a href="#header">상단 영역 바로가기</a>
+		<a href="#main">본문 바로가기</a>
+		<a href="#footer">하단 바로가기</a>
+	</div>
+	<div id="wrap">
+		<div id="header">
+			<div id="head_gnb">
+				<div class="container">
+					<div class="gnb_bar">
+						<div class="gnb_nav_box">
+							<button type="button" class="gnb_control open">포털사이트
+								<i></i>
+							</button>
+							<ul class="gnb_nav clFix">
+								<li><a href="#">분야별포털</a></li>
+								<li><a href="#">일자리경제 포털</a></li>
+								<li><a href="#">평생학습포털</a></li>
+								<li><a href="#">통합예약포털</a></li>
+								<li><a href="#">동네소식알리미</a></li>
+								<li><a href="#">미디어시흥</a></li>
+							</ul>
+							<button type="button" class="gnb_control close">포털사이트
+								<i></i>
+							</button>
+						</div>
+						<ul class="gnb_nav clFix">
+							<li><a href="#">맞춤형 메인</a></li>
+							<li><a href="#">시흥시의회</a></li>
+							<li class="last"><a href="#">홈화면 설정하기</a></li>
+						</ul>
+						<ul class="gnb_option clFix">
+							<li><a href="#" class="fav_site">자주찾는 메뉴</a></li>
+							<li>
+							<div class="lang_site">
+								<label for="Lang"></label>
+								<select name="Lang" id="Lang">
+									<option value="lang" selected>language</option>
+									<option value="eng">english</option>
+									<option value="cn">中文</option>
+									<option value="jp">日本語</option>
+								</select>
+								<input type="button" id="go" value="GO" title="다국어 홈페이지 이동"/>
+							</div>
+							</li>
+							<li class="login"><a href="sub/login.html">로그인/회원가입</a></li>
+						</ul>
+					</div>
+				</div>
+			</div><!-- id="head_gnb" -->
+			<div id="head_inner">
+				<div class="container">
+					<div class="innerWrap">
+						<h1 class="ir_pm">시흥시 로고
+							<a href="index.html" class="main_logo">시흥시 로고</a>
+						</h1>
+						<div class="searchWrap">
+							<form method="post" class="searchForm" target="_blank">
+								<ul class="search_win">
+									<li>
+										<label for="searchKey" class="ir_so">검색 조건 선택하기</label>
+										<select name="searchKey" id="searchKey" title="통합검색항목">
+											<option value="all">통합검색</option>
+											<option value="web">웹페이지검색</option>
+											<option value="board">게시판검색</option>
+											<option value="content">컨텐츠검색</option>
+											<option value="file">파일검색</option>
+											<option value="emp">직원검색</option>
+										</select>
+									</li>
+									<li>
+										<label for="searchWord" class="ir_so">검색어 입력</label>
+										<input type="text" id="searchWord" title="검색어 입력" placeholder="행복한 변화 새로운 시흥"/>
+									</li>
+								</ul>
+								<span class="search_btn">
+									<input type="submit" title="통합검색" value="검색"/>
+								</span>
+							</form>
+							<div class="keyword">
+								<ul>
+									<li><a href="#">코로나19</a></li>
+									<li><a href="#">대형폐기물</a></li>
+									<li><a href="#">민원서식</a></li>
+									<li><a href="#">민원신청</a></li>
+									<li><a href="#">해로토로</a></li>
+									<li><a href="#">보도자료</a></li>
+									<li><a href="#">보건증</a></li>
+								</ul>
+							</div>
+						</div><!-- class="searchWrap" -->
+						<div class="sns_icon">
+							<ul>
+								<li><a href="#" title="페이스북">페이스북</a></li>
+								<li><a href="#" title="카카오스토리">카카오스토리</a></li>
+								<li><a href="#" title="네이버블로그">네이버블로그</a></li>
+								<li><a href="#" title="유튜브">유튜브</a></li>
+								<li><a href="#" title="인스타그램">인스타그램</a></li>
+							</ul>
+						</div>
+					</div> <!-- class="innerWrap" -->
+				</div>
+			</div><!-- id="head_inner -->
+			<div id="head_lnb">
+				<div class="layer">
+					<h1 class="ir_so">메뉴구성</h1>
+					<ul id="lnb">
+						<li id="lnb01" class="clFix">
+							<a href="sub/head_sub01.html" target="_self"><span>참여소통</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0101" class="clFix"><a href="#" target="_blank"><span>시민제안</span></a></li>
+									<li id="lnb0102" class="clFix"><a href="#" target="_blank"><span>동네소식알리미</span></a></li>
+									<li id="lnb0103" class="clFix"><a href="#"><span>열린게시판</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb010301" class="clFix"><a href="#"><span>자유게시판</span></a></li>
+											<li id="lnb010302" class="clFix"><a href="#"><span>칭찬게시판</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0104" class="clFix"><a href="#"><span>온라인투표(설문조사)</span></a></li>
+									<li id="lnb0105" class="clFix"><a href="#" target="_blank"><span>대학생아르바이트사업</span></a></li>
+									<li id="lnb0106" class="clFix"><a href="#" target="_blank"><span>주민참여예산</span></a></li>
+									<li id="lnb0107" class="clFix"><a href="#" target="_blank"><span>시설 대관신청</span></a></li>
+								</ul>
+							</div>
+						</li>
+						<li id="lnb02" class="clFix">
+							<a href="sub/head_sub02.html" target="_self"><span>종합민원</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0201" class="clFix">
+										<a href="#"><span>민원상담</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020101" class="clFix"><a href="#"><span>시흥시에 바란다(민원신청)</span></a></li>
+											<li id="lnb020102" class="clFix"><a href="#" target="_blank"><span>외국인용 전자민원창구</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0202" class="clFix">
+										<a href="#"><span>민원서비스</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020201" class="clFix"><a href="#"><span>1회 방문 상담창구 운영</span></a></li>
+											<li id="lnb020202" class="clFix"><a href="#"><span>사전심사제도</span></a></li>
+											<li id="lnb020203" class="clFix"><a href="#"><span>민원후견인제도</span></a></li>
+											<li id="lnb020204" class="clFix"><a href="#"><span>납세자 보호관계도</span></a></li>
+											<li id="lnb020205" class="clFix"><a href="#" target="_blank"><span>110화상수화 통역서비스</span></a></li>
+											<li id="lnb020206" class="clFix"><a href="#" target="_blank"><span>행정정보공동이용센터</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0203" class="clFix">
+										<a href="#"><span>분야별 민원</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020301" class="clFix"><a href="#"><span>지적</span></a></li>
+											<li id="lnb020302" class="clFix"><a href="#"><span>부동산</span></a></li>
+											<li id="lnb020303" class="clFix"><a href="#"><span>주택/건축</span></a></li>
+											<li id="lnb020304" class="clFix"><a href="#" target="_blank"><span>여권</span></a></li>
+											<li id="lnb020305" class="clFix"><a href="#" target="_blank"><span>자동차</span></a></li>
+											<li id="lnb020306" class="clFix"><a href="#" target="_blank"><span>수도</span></a></li>
+											<li id="lnb020307" class="clFix"><a href="#"><span>농정</span></a></li>
+											<li id="lnb020308" class="clFix"><a href="#"><span>정보통신</span></a></li>
+											<li id="lnb020309" class="clFix"><a href="#"><span>행정(과거사 진실규명 신청)</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0204" class="clFix">
+										<a href="#"><span>시민호민관(고충민원)</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020401" class="clFix"><a href="#"><span>호민관 소개</span></a></li>
+											<li id="lnb020402" class="clFix"><a href="#"><span>고충민원처리절차</span></a></li>
+											<li id="lnb020403" class="clFix"><a href="#"><span>고충민원신청</span></a></li>
+											<li id="lnb020404" class="clFix"><a href="#"><span>운영성과</span></a></li>
+											<li id="lnb020405" class="clFix"><a href="#"><span>처리사례</span></a></li>
+											<li id="lnb020406" class="clFix"><a href="#"><span>보도자료</span></a></li>
+											<li id="lnb020407" class="clFix"><a href="#"><span>공지사항</span></a></li>
+											<li id="lnb020408" class="clFix"><a href="#"><span>관련사이트</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0205" class="clFix">
+										<a href="#"><span>시민신고센터</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020501" class="clFix"><a href="#"><span>불법 중개행위 신고</span></a></li>
+											<li id="lnb020502" class="clFix"><a href="#"><span>부동산 실거래 위반신고</span></a></li>
+											<li id="lnb020503" class="clFix"><a href="#"><span>행정규제개혁</span></a></li>
+											<li id="lnb020504" class="clFix"><a href="#" target="_blank"><span>국무조정실 규제개혁신문고</span></a></li>
+											<li id="lnb020505" class="clFix"><a href="#"><span>공직자 부조리 신고</span></a></li>
+											<li id="lnb020506" class="clFix"><a href="#"><span>공익 신고제도</span></a></li>
+											<li id="lnb020507" class="clFix"><a href="#" target="_blank"><span>안전신문고</span></a></li>
+											<li id="lnb020508" class="clFix"><a href="#"><span>청소년 유해환경 신고포상금</span></a></li>
+											<li id="lnb020509" class="clFix"><a href="#" target="_blank"><span>행정처분 공개</span></a></li>
+											<li id="lnb020510" class="clFix"><a href="#" target="_blank"><span>예산낭비 신고센터</span></a></li>
+											<li id="lnb020511" class="clFix"><a href="#" target="_blank"><span>지방기업 규제애로 신고센터</span></a></li>
+											<li id="lnb020512" class="clFix"><a href="#" target="_blank"><span>소비자 고발센터</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0206" class="clFix">
+										<a href="#"><span>민원안내</span></a>
+										<ul class="depth03 clFix">
+											<li id="lnb020601" class="clFix"><a href="#"><span>무인민원발급기</span></a></li>
+											<li id="lnb020602" class="clFix"><a href="#"><span>민원편람(민원서식 모음)</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="lnb03" class="clFix">
+							<a href="sub/head_sub03.html" target="_self"><span>열린행정</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0301" class="clFix">
+										<a href="#"><span>열린행정</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>행정서비스헌장</span></a></li>
+											<li class="clFix"><a href="#"><span>사전정보공표</span></a></li>
+											<li class="clFix"><a href="#"><span>행정자료</span></a></li>
+											<li class="clFix"><a href="#"><span>법령유권해석</span></a></li>
+											<li class="clFix"><a href="#"><span>적극행정</span></a></li>
+											<li class="clFix"><a href="#"><span>적긍행정공무원 시민 추천</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0302" class="clFix">
+										<a href="#"><span>행정절차제도</span></a>
+									</li>
+									<li id="lnb0303" class="clFix">
+										<a href="#"><span>정책실명제</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>정책실명제 안내</span></a></li>
+											<li class="clFix"><a href="#"><span>정책실명제 대상 사업</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0304" class="clFix">
+										<a href="#"><span>행정정보공개</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>행정정보공개</span></a></li>
+											<li class="clFix"><a href="#"><span>비공개 대상정보</span></a></li>
+											<li class="clFix"><a href="#"><span>조직운영5대지표</span></a></li>
+											<li class="clFix"><a href="#"><span>인사통계</span></a></li>
+											<li class="clFix"><a href="#"><span>공유재산</span></a></li>
+											<li class="clFix"><a href="#"><span>개인정보위탁현황</span></a></li>
+											<li class="clFix"><a href="#"><span>개인정보 목적외이용 현황</span></a></li>
+											<li class="clFix"><a href="#"><span>개인정보 제3자 제공 현황</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>자치법규</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>정보공개청구</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>공공데이터포털</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>경기데이터드림</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0305" class="clFix">
+										<a href="#"><span>시흥인포&카드스토리</span></a>
+									</li>
+									<li id="lnb0306" class="clFix">
+										<a href="#"><span>시흥통계</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>기본통계-통계연보</span></a></li>
+											<li class="clFix"><a href="#"><span>인구현황</span></a></li>
+											<li class="clFix"><a href="#"><span>주민등록인구통계</span></a></li>
+											<li class="clFix"><a href="#"><span>광업 제조업조사</span></a></li>
+											<li class="clFix"><a href="#"><span>사회조사보고서</span></a></li>
+											<li class="clFix"><a href="#"><span>사업체조사보고서</span></a></li>
+											<li class="clFix"><a href="#"><span>시흥시민원지표</span></a></li>
+											<li class="clFix"><a href="#"><span>차량등록현황</span></a></li>
+											<li class="clFix"><a href="#"><span>기타통계</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>통계청</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0307" class="clFix">
+										<a href="#"><span>계약정보공개</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>발주계획</span></a></li>
+											<li class="clFix"><a href="#"><span>입찰정보</span></a></li>
+											<li class="clFix"><a href="#"><span>계약정보</span></a></li>
+											<li class="clFix"><a href="#"><span>대금지급</span></a></li>
+											<li class="clFix"><a href="#"><span>계약정보(공기업특별회계)</span></a></li>
+											<li class="clFix"><a href="#"><span>하도급계약(공기업특별회계)</span></a></li>
+											<li class="clFix"><a href="#"><span>대금지급(공기업특별회계)</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0308" class="clFix">
+										<a href="#"><span>청렴한시흥</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>감사결과 공개</span></a></li>
+											<li class="clFix"><a href="#"><span>부패신고</span></a></li>
+											<li class="clFix"><a href="#"><span>청렴소식</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0309" class="clFix">
+										<a href="#"><span>재정현황</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>세일</span></a></li>
+											<li class="clFix"><a href="#"><span>세출</span></a></li>
+											<li class="clFix"><a href="#"><span>지출내역</span></a></li>
+											<li class="clFix"><a href="#"><span>결산서</span></a></li>
+											<li class="clFix"><a href="#"><span>예산서</span></a></li>
+											<li class="clFix"><a href="#"><span>(구)결산서</span></a></li>
+											<li class="clFix"><a href="#"><span>중기 지방재정 계획</span></a></li>
+											<li class="clFix"><a href="#"><span>지방재정 공시</span></a></li>
+											<li class="clFix"><a href="#"><span>기금운용계획</span></a></li>
+											<li class="clFix"><a href="#"><span>지방채 현황 및 상환계획</span></a></li>
+											<li class="clFix"><a href="#"><span>업무추진비 지출안내</span></a></li>
+											<li class="clFix"><a href="#"><span>연구용역결과</span></a></li>
+											<li class="clFix"><a href="#"><span>투자심사결과</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0310" class="clFix">
+										<a href="#"><span>공공저작물</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="lnb04" class="clFix">
+							<a href="sub/head_sub04.html" target="_self"><span>시정소식</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0401" class="clFix">
+										<a href="#"><span>시정정보</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>새소식</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>행사일정</span></a></li>
+											<li class="clFix"><a href="#"><span>고시/공고</span></a></li>
+											<li class="clFix"><a href="#"><span>타기관 고시/공고</span></a></li>
+											<li class="clFix"><a href="#"><span>(구)고시/공고</span></a></li>
+											<li class="clFix"><a href="#"><span>입찰정보</span></a></li>
+											<li class="clFix"><a href="#"><span>입법예고</span></a></li>
+											<li class="clFix"><a href="#"><span>채용 및 모집정보</span></a></li>
+											<li class="clFix"><a href="#"><span>분양공고</span></a></li>
+											<li class="clFix"><a href="#"><span>코로나19(상황보고)</span></a></li>
+											<li class="clFix"><a href="#"><span>코로나19(보도자료)</span></a></li>
+											<li class="clFix"><a href="#"><span>코로나19(힘내라시흥!)</span></a></li>
+											<li class="clFix"><a href="#"><span>코로나19(지원정책)</span></a></li>
+											<li class="clFix"><a href="#"><span>확진환자 동선삭제 신고센터</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0402" class="clFix">
+										<a href="#"><span>시정간행물</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>뷰티풀시흥(시정소식지)</span></a></li>
+											<li class="clFix"><a href="#" target="_blank"><span>시흥 참, 잘 오셨습니다(전입책자)</span></a></li>
+											<li class="clFix"><a href="#"><span>어쩌다 어른(청년정책 안내서)</span></a></li>
+											<li class="clFix"><a href="#"><span>시흥시 공공디자인메뉴얼 북</span></a></li>
+											<li class="clFix"><a href="#"><span>시흥시보</span></a></li>
+											<li class="clFix"><a href="#"><span>반상회보</span></a></li>
+											<li class="clFix"><a href="#"><span>시정백서</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0403" class="clFix">
+										<a href="#"><span>미디어시흥</span></a>
+									</li>
+									<li id="lnb0404" class="clFix">
+										<a href="#"><span>시흥시/유관기관 SNS 현황</span></a>
+									</li>
+									<li id="lnb0405" class="clFix">
+										<a href="#"><span>팩트체크(사실은 이렇습니다)</span></a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="lnb05" class="clFix">
+							<a href="sub/head_sub05.html" target="_self"><span>시흥소개</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0501" class="clFix">
+										<a href="#" target="_blank"><span>열린시장실</span></a>
+									</li>
+									<li id="lnb0502" class="clFix">
+										<a href="#"><span>시흥시 소개</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>상징물</span></a></li>
+											<li class="clFix"><a href="#"><span>시의 노래</span></a></li>
+											<li class="clFix"><a href="#"><span>시지명 한자/영문 안내</span></a></li>
+											<li class="clFix"><a href="#"><span>캐릭터(해로토로)</span></a></li>
+											<li class="clFix"><a href="#"><span>도시브랜드</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0503" class="clFix">
+										<a href="#"><span>일반현황</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>행정구역</span></a></li>
+											<li class="clFix"><a href="#"><span>시흥현황</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0504" class="clFix">
+										<a href="#"><span>시청안내</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>청사안내</span></a></li>
+											<li class="clFix"><a href="#"><span>행정조직도</span></a></li>
+											<li class="clFix"><a href="#"><span>직원 업무 안내</span></a></li>
+											<li class="clFix"><a href="sub/siheungmap.html" target="_self"><span>찾아오시는 길</span></a></li>
+										</ul>
+									</li>
+									<li id="lnb0505" class="clFix">
+										<a href="#"><span>행정복지센터(주민센터)</span></a>
+										<ul class="depth03 clFix">
+											<li class="clFix"><a href="#"><span>공지사항</span></a></li>
+											<li class="clFix"><a href="#"><span>우리마을 새소식</span></a></li>
+											<li class="clFix"><a href="#"><span>주민자치 활동</span></a></li>
+											<li class="clFix"><a href="#"><span>찾아오시는 길</span></a></li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li id="lnb06" class="clFix">
+							<a href="#" target="_self"><span>분야별정보</span></a>
+							<div class="lnb_sub clFix">
+								<ul class="depth02 clFix">
+									<li id="lnb0601" class="clFix"><a href="#"><span>복지</span></a></li>
+									<li id="lnb0602" class="clFix"><a href="#"><span>보건</span></a></li>
+									<li id="lnb0603" class="clFix"><a href="#"><span>안전/민방위</span></a></li>
+									<li id="lnb0604" class="clFix"><a href="#"><span>스마트시티/교통</span></a></li>
+									<li id="lnb0605" class="clFix"><a href="#"><span>교육/체육</span></a></li>
+									<li id="lnb0606" class="clFix"><a href="#"><span>환경/농어업</span></a></li>
+									<li id="lnb0607" class="clFix"><a href="#"><span>문화/관광</span></a></li>
+									<li id="lnb0608" class="clFix"><a href="#" target="_blank"><span>일자리경제포털</span></a></li>
+									<li id="lnb0609" class="clFix"><a href="#" target="_blank"><span>평생학습포털</span></a></li>
+									<li id="lnb0610" class="clFix"><a href="#" target="_blank"><span>통합예약포털</span></a></li>
+									<li id="lnb0611" class="clFix"><a href="#" target="_blank"><span>동네소식 알리미</span></a></li>
+									<li id="lnb0612" class="clFix"><a href="#" target="_blank"><span>미디어시흥</span></a></li>
+									<li id="lnb0613" class="clFix"><a href="#" target="_blank"><span>사이버역사관</span></a></li>
+									<li id="lnb0614" class="clFix"><a href="#" target="_blank"><span>아동친화도시</span></a></li>
+									<li id="lnb0615" class="clFix"><a href="#" target="_blank"><span>어린이안전체험관</span></a></li>
+									<li id="lnb0616" class="clFix"><a href="#" target="_blank"><span>시흥형 온종일돌봄</span></a></li>
+									<li id="lnb0617" class="clFix"><a href="#" target="_blank"><span>대형폐기물 온라인 수거</span></a></li>
+									<li id="lnb0618" class="clFix"><a href="#" target="_blank"><span>전체메뉴</span></a></li>
+								</ul>
+							</div>	
+						</li>
+					</ul>
+				</div>
+			</div><!-- id="head_lnb -->
+		</div><!-- id="header" -->
+		<div id="main">
+			<div id="visualWrap">
+				<div class="visual">
+					<div class="fix-layout">
+						<div class="container">
+							<div id="main_visual">
+								<div class="swiperWrap">
+									<div class="slider slider01"><a href="#"><img src="img/visual_ban06.png" alt="슬라이더1"/></a></div>
+									<div class="slider slider02"><a href="#"><img src="img/visual_ban02.jpg" alt="슬라이더2"/></a></div>
+									<div class="slider slider03"><a href="#"><img src="img/visual_ban03.jpeg" alt="슬라이더3"/></a></div>
+									<div class="slider slider04"><a href="#"><img src="img/visual_ban04.jpg" alt="슬라이더4"/></a></div>
+									<div class="slider slider05"><a href="#"><img src="img/visual_ban05.jpg" alt="슬라이더5"/></a></div>
+									<div class="slider slider06"><a href="#"><img src="img/visual_ban01.jpg" alt="슬라이더5"/></a></div>
+								</div>
+								<div class="control_box">
+									<div class="control">
+										<button type="button" class="vis_pause">
+											<img src="img/spr_slide_control_stop.png" alt="일시정지"/>
+										</button>
+										<button type="button" class="vis_play">
+											<img src="img/spr_slide_control_play.png" alt="재생"/>
+										</button>
+									</div>
+									<div class="swiperPage">
+										<button class="page_btn on">1</button>
+										<button class="page_btn">2</button>
+										<button class="page_btn">3</button>
+										<button class="page_btn">4</button>
+										<button class="page_btn">5</button>
+										<button class="page_btn">6</button>
+									</div>
+								</div>	
+							</div><!-- id="main_visual" -->
+							<div id="popupWrap">
+								<div class="fix_layout">
+									<div class="quick">
+										<a href="#"><em><img src="img/city_quick07.png" alt="캘린더아이콘"/></em><span>통합예약</span></a>
+										<a href="#"><em><img src="img/city_quick08.png" alt="웹페이지마우스아이콘"/></em><span>일자리경제포털</span></a>
+										<a href="#"><em><img src="img/city_quick09.png" alt="확성기아이콘"/></em><span>동네소식 알리미</span></a>
+									</div>
+									<div class="main_popup">
+										<div class="swiperWrap">
+											<div class="slider slider1"><a href="#"><img src="img/sub_ban01.png" alt="슬라이더1"/></a></div>
+											<div class="slider slider2"><a href="#"><img src="img/sub_ban02.jpg" alt="슬라이더2"/></a></div>
+											<div class="slider slider3"><a href="#"><img src="img/sub_ban03.jpg" alt="슬라이더3"/></a></div>
+											<div class="slider slider4"><a href="#"><img src="img/sub_ban04.png" alt="슬라이더4"/></a></div>
+											<div class="slider slider5"><a href="#"><img src="img/sub_ban05.jpg" alt="슬라이더5"/></a></div>
+											<div class="slider slider6"><a href="#"><img src="img/sub_ban06.png" alt="슬라이더6"/></a></div>
+										</div>
+										<div class="control_box">
+											<div class="control">
+												<button class="slide_prev"><img src="img/spr_slide_control_pre.png" alt="이전"/></button>
+												<button class="slide_next"><img src="img/spr_slide_control_next.png" alt="다음"/></button>
+												<button class="vis_pause"><img src="img/spr_slide_control_stop.png" alt="일시정지"/></button>
+												<button class="vis_play"><img src="img/spr_slide_control_play.png" alt="재생"/></button>
+											</div>
+											<div class="page_num">
+												<span class="page_current">1</span> /
+												<span class="page_total">6</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div><!-- id="popupWrap" -->
+						</div>
+					</div>
+				</div>
+			</div><!-- id="visualWrap" -->
+			<div id="main_notice">
+				<div class="container">
+					<div id="notice_list" class="tab_box">
+						<dl class="on" data-tab="tab-1">
+							<dt><button type="button">새소식<span class="ir_so">최근 게시물 보기</span></button></dt>
+							<dd class="on" id="tab-1">
+								<ul class="list">
+									<li class="board_notice">
+										<a href="#"><strong>'코로나19 재난문자 송출 개선방안'에 따라 4월 1일부터 '확진환자 발생 재난문자'를 발송하지 않습니다.</strong><span>2021.04.02</span></a>
+									</li>
+									<li class="board_notice">
+										<a href="#"><strong>코로나19 예방접종 후 이상반응에 대한 안내사항</strong><span>2021.04.01</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>[4월 2일 시흥시 코로나19 상황보고, 13시]</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>[힘내라 시흥](주)미페이스 손소독제 30만 개 후원(21.03.30.)</strong><span>2021.04.01</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021년부터 중·소형 이륜자동차 정기검사 확대 시행</strong><span>2021.04.01</span></a>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="more_btn">새소식 더보기</a>
+							</dd>
+						</dl>
+						<dl data-tab="tab-2">
+							<dt><button type="button">고시공고<span class="ir_so">최근 게시물 보기</span></button></dt>
+							<dd id="tab-2">
+								<ul class="list">
+									<li>
+										<a href="#"><strong>2021년 청년협업마을 청년매니저 모집 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>「제3차 일반택시기사 긴급고용안정지원」 사업 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021년도 근로자의 날 기념행사 지원사업 공모 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021 문화공감학교 공모 1차 서류심사 결과 안내</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>미산동문화복지센터 직원(팀장)채용 서류전형 합격자 공고 및 면접 안내 공고</strong><span>2021.04.02</span></a>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="more_btn">고시공고 더보기</a>
+							</dd>
+						</dl>
+						<dl data-tab="tab-3">
+							<dt><button type="button">모집공고<span class="ir_so">최근 게시물 보기</span></button></dt>
+							<dd id="tab-3">
+								<ul class="list">
+									<li>
+										<a href="#"><strong>2021년 소래빛도서관 주말 기간제 근로자 채용 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021년도 제2회 직원 공개경쟁 및 겨력경쟁 채용시험 시행계획 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021 시흥시 녹색건축물 조성 지원사업 대상자 모집</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021년 취업교육「소형건설기계(지게차)면허 과정」교육생 모집 공고</strong><span>2021.04.02</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>2021년 코로나19 백신접종 업무보조 기간제 근로자 채용 공고</strong><span>2021.04.01</span></a>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="more_btn">모집공고 더보기</a>
+							</dd>
+						</dl>
+						<dl data-tab="tab-4">
+							<dt><button type="button">입찰정보<span class="ir_so">최근 게시물 보기</span></button></dt>
+							<dd id="tab-4">
+								<ul class="list">
+									<li>
+										<a href="#"><strong>시설공사(소액수의) 견적제출 안내공고[중앙정 케노피 증축 공사]</strong><span>2021.04.01</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>시설공사(소액수의) 견적제출 안내공고[2021년 교통안전시설심의 위원회 가결사항 개선공사-토목]</strong><span>2021.04.01</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>시설공사(소액수의) 견적제출 안내공고[라온초등학교(배곧동일원) 도로정비공사]</strong><span>2021.03.31</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>시설공사(소액수의) 견적제출 안내공고[2021년 현충탑 종합 정비공사]</strong><span>2021.03.31</span></a>
+									</li>
+									<li>
+										<a href="#"><strong>[긴급]시설공사 입찰 공고[도일시장 공영주차장 건립공사(건축)]</strong><span>2021.03.31</span></a>
+									</li>
+								</ul>
+								<a href="javascript:void(0)" class="more_btn">입찰정보 더보기</a>
+							</dd>
+						</dl>
+					</div><!-- id="notice_list" -->
+					<div id="mayor_link">
+						<p>열린 시장실 - 시흥시장 임병택 입니다.</p>
+						<a href="#">시장입니다</a>
+						<a href="#">공약&시민과의 약속</a>
+						<a href="#">시민제안</a>
+						<a href="#">펙트체크</a>
+						<a href="#">언론 속 시흥이야기</a>
+					</div>
+				</div>
+			</div>
+			<div id="main_quick">
+				<div class="container">
+					<div id="quick_wrap">
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick1.png" alt="확성기아이콘"/></em><span>종합민원</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick2.png" alt="사람아이콘"/></em><span>직원정보</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick3.png" alt="핸드폰아이콘"/></em><span>재난&소통 알리미</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick4.png" alt="구급약아이콘"/></em><span>보건소</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick5.png" alt="책아이콘"/></em><span>도서관</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick6.png" alt="연결고리아이콘"/></em><span>시소(시설대관)</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick7.png" alt="사람전구아이콘"/></em><span>육아 종합지원센터</span></a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#"><em><img src="img/img_quick8.png" alt="법규책아이콘"/></em><span>시흥시 자치법규</span></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="main_broad">
+				<div class="container">
+					<div id="event_calendar">
+						<h2 class="ir_so">2021년 04월 05일 시흥시 세부일정</h2>
+						<div class="title">
+							<strong>시흥시</strong>주요행사
+							<button>오늘선택</button>
+						</div>
+						<div class="event_calendar">
+							<div class="calendar_head">
+								<div class="calendar_date">
+									<button class="month_prev">이전 달</button>
+									<span id="event_title">
+										<strong>2021</strong>년<strong>04</strong>월
+									</span>
+									<button class="month_next">다음 달</button>
+								</div>
+								<span class="today">2021.04.05</span>
+							</div>
+							<div class="calendar_body">
+								<div class="calendar">
+									<table id="calendar_table">
+										<caption class="ir_so">2021년 04월 이달의 행사 및 교육 일정을 일, 월, 화, 수, 목, 금, 토요일 별로 안내하는 표입니다.</caption>
+										<thead>
+											<tr>
+												<th scope="col"><span class="red">일</span></th>
+												<th scope="col">월</th>
+												<th scope="col">화</th>
+												<th scope="col">수</th>
+												<th scope="col">목</th>
+												<th scope="col">금</th>
+												<th scope="col"><span class="blue">토</span></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td>&nbsp;</td>
+												<td class="day task"><a href="#">01</a></td>
+												<td class="day task"><a href="#">02</a></td>
+												<td class="day task"><a href="#">03</a></td>
+											</tr>
+											<tr>
+												<td class="day task"><a href="#">04</a></td>
+												<td class="day task selected"><a href="#">05</a></td>
+												<td class="day task"><a href="#">06</a></td>
+												<td class="day task"><a href="#">07</a></td>
+												<td class="day task"><a href="#">08</a></td>
+												<td class="day task"><a href="#">09</a></td>
+												<td class="day">10</td>
+											</tr>
+											<tr>
+												<td class="day">11</td>
+												<td class="day">12</td>
+												<td class="day">13</td>
+												<td class="day">14</td>
+												<td class="day">15</td>
+												<td class="day task"><a href="#">16</a></td>
+												<td class="day">17</td>
+											</tr>
+											<tr>
+												<td class="day">18</td>
+												<td class="day task"><a href="#">19</a></td>
+												<td class="day">20</td>
+												<td class="day task"><a href="#">21</a></td>
+												<td class="day">22</td>
+												<td class="day">23</td>
+												<td class="day">24</td>
+											</tr>
+											<tr>
+												<td class="day">25</td>
+												<td class="day">26</td>
+												<td class="day task"><a href="#">27</a></td>
+												<td class="day task"><a href="#">28</a></td>
+												<td class="day">29</td>
+												<td class="day">30</td>
+												<td>&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+								</div><!-- class="calendar" -->
+								<div class="calendarTask">
+									<ul id="calendar_task">
+										<li><a href="#">
+												<em><img src="img/task1.png" alt="따오기 추진단 정기모임"/></em>
+												<i>기타</i>
+												<strong>따오기 추진단 정기모임</strong>
+												<span><time>14:00</time>목감동 행정복지센터 하늘방</span>
+											</a>
+										</li>
+										<li><a href="#">
+												<em><img src="img/task2.png" alt="'보육교사 실무전문가'과정 교육생 모집"/></em>
+												<i>교육</i>
+												<strong>"보육교사 실무전문가"과정 교육생 모집</strong>
+												<span><time>09:30</time>온라인, 새일본부 교육장</span>
+											</a>
+										</li>
+										<li><a href="#">
+												<em><img src="img/task3.png" alt="'언택트 미디어 전문강사'직업교육훈련생 모집"/></em>
+												<i>교육</i>
+												<strong>"언택트 미디어 전문강사"직업교육훈련생 모집</strong>
+												<span><time>13:30</time>온라인, 새일본부 교육장</span>
+											</a>
+										</li>
+										<li><a href="#">
+												<em><img src="img/task4.jpg" alt="2021년 시민주도 활성화 공모"/></em>
+												<i>기타</i>
+												<strong>2021년 시민주도 활성화 공모</strong>
+												<span><time>00:00</time>시흥시 전역</span>
+											</a>
+										</li>
+										<li><a href="#">
+												<em><img src="img/task1.png" alt="제4기 마을활동가 양성 기본과정 수강생 모집"/></em>
+												<i>교육</i>
+												<strong>제4기 마을활동가 양성 기본과정 수강생 모집</strong>
+												<span><time>09:00</time>정왕본동 행복복지센터</span>
+											</a>
+										</li>
+									</ul>
+								</div>
+							</div><!-- class="calendar_body" -->
+						</div><!-- class="event_calendar" -->
+						<a href="#" class="more_btn">주요행사 더보기</a>
+					</div><!-- id="event_calendar" -->
+					<div id="broad_list">
+						<div class="title">
+							<strong>보도</strong>자료
+							<button>미디어 시흥</button>
+						</div>
+						<ul class="list">
+							<li>
+								<a href="#"><em><img src="img/list1.jpg" alt="시흥시, 올 1월 1일 기준 개별공시지가 열람 및 의견접수"/></em><strong>시흥시, 올 1월 1일 기준 개별공시지가 열람 및 의견접수</strong><span>2021-04-05</span></a>
+							</li>
+							<li>
+								<a href="#"><em><img src="img/list2.jpg" alt="시흥시 갯골생태공원 벚꽃길 올해도 출입 통제"/></em><strong>시흥시 갯골생태공원 벚꽃길 올해도 출입 통제</strong><span>2021-04-05</span></a>
+							</li>
+							<li>
+								<a href="#"><em><img src="img/list3.jpg" alt="시흥시, 뇌병변 장애인 기저귀 구입비용 지원"/></em><strong>시흥시, 뇌병변 장애인 기저귀 구입비용 지원</strong><span>2021-04-05</span></a>
+							</li>
+						</ul>
+						<a href="#" class="more_btn">주요행사 더보기</a>
+					</div>
+				</div>
+			</div>
+			<div id="main_community">
+				<div class="container">
+					<div id="social_list" class="box tab_box">
+						<div class="title">
+							<sup>SOCIAL MEDIA</sup>
+							<strong>시흥</strong>토크
+						</div>
+						<dl class="on">
+							<dt><button class="blog"><img src="img/sns_blog.png" alt="네이버블로그"/></button>
+							</dt>
+							<dd class="on">
+								<div class="sns_list">
+									<div class="item">
+										<div class="tit">
+											<a href="#" class="profile"><img src="img/temp_sns_avatar.png" alt="시흥시청 프로필 이미지"/></a>
+											<strong>시흥시</strong>
+										</div>
+										<div class="con">
+											<a href="#">시흥 갯골생태공원에서 펼쳐지는 비대면 문화 프로그램'2021 바람언덕에 그린스쿨'시흥시는 2019년부터문화체육관광부 생태테마관광 10선에 선정되어갯골생태공원을 배경으로 하는 새로운 문화바람을 만들고 있습니다.본 사업은 문화체육관광부, 시흥시 그리고 시민분들이 함께 합니다.· 프로그램 안내 ·러닝전도사 안정은과 함께하는 #오하운 #버츄얼런▼▼▼홈페이지에서 자세히 알아보기식물 친구들과 나만의 정원을 만들어보아요!쉽게 접할 수 있는 다육식물로누구나 할 수 있는 쉽고, 재미있는원예치료·힐링 프로그램!▼▼▼아래 링크를 통해 자세히 알아보기우리가 가장 행복했던 그 순간의 표정을꽃의 아름다움으로 표.......</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="tit">
+											<a href="#" class="profile"><img src="img/temp_sns_avatar.png" alt="시흥시청 프로필 이미지"/></a>
+											<strong>시흥시</strong>
+										</div>
+										<div class="con">
+											<a href="#">1. 시흥시 확진환자 및 자가격리자확진환자 2명(#793~#794, 전일 13시 대비)이 발생했습니다. 7명(#735, #739, #748, #754, #761, #762, #767)은 치료를 마치고 퇴원했습니다.시흥#790~#791 확진환자 역학조사가 완료됐습니다. 확진환자 발생 현황 및 역학조사 결과는 시흥시 홈페이지( https://www.siheung.go.kr/corona_policy.jsp )에서 확인하실 수 있습니다.자가격리자는 32명 증가한 874명입니다. 이중 527명은 해외입국자로, 자동 자가격리된 사항입니다. 현재까지 격리 해제되거나 감시 해제된 인원은 총 87,989명입니다.현재 임시선별검사소에서 진행 중인 검사 건수는 376건, 누적 검사 건수는 149,487건입니다.임시선별검사.......</a>
+										</div>
+									</div>
+									<div class="item">
+										<div class="tit">
+											<a href="#" class="profile"><img src="img/temp_sns_avatar.png" alt="시흥시청 프로필 이미지"/></a>
+											<strong>시흥시</strong>
+										</div>
+										<div class="con">
+											<a href="#">[4월 3일 시흥시 코로나19 상황보고, 13시]1. 시흥시 확진환자 및 자가격리자확진환자 2명(#791~#792, 전일 13시 대비)이 발생했습니다. 6명(#699, #747, #757, #759, #764, #765)은 치료를 마치고 퇴원했습니다.확진환자에 대한 내용은 시흥시 홈페이지( https://www.siheung.go.kr/corona_policy.jsp )에서 확인하실 수 있습니다.자가격리자는 32명 감소한 842명입니다. 이중 484명은 해외입국자로, 자동 자가격리된 사항입니다. 현재까지 격리 해제되거나 감시 해제된 인원은 총 87,592명입니다.현재 임시선별검사소에서 진행 중인 검사 건수는 1,872건, 누적 검사 건수는 149,111건입니다.임시선별검사소는 4월 11일까지 연.......</a>
+										</div>
+									</div>
+								</div>
+							</dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="img/sns_facebook.png" alt="페이스북"/></a></dt>
+							<dd><p>시흥시 페이스북</p></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="img/sns_kkstory.png" alt="카카오스토리"/></a></dt>
+							<dd><p>시흥시 카카오스토리</p></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="img/sns_youtube.png" alt="유튜브"/></a></dt>
+							<dd><p>시흥시 유튜브</p></dd>
+						</dl>
+						<dl>
+							<dt><a href="#"><img src="img/sns_instar.png" alt="인스타그램"/></a></dt>
+							<dd><p>시흥시 인스타그램</p></dd>
+						</dl>
+					</div>
+					<div id="single_banner" class="box">
+						<a href="#"><img src="img/banner_tour.png" alt="siheung tourism, 시흥에서 만나는 첫번째 봄 - 당신을, 봄 : 시흥관광여행 바로가기"/></a>
+					</div>
+					<div id="welfare_list" class="box">
+						<div class="title">
+							<strong>시흥</strong>
+							복지정보
+						</div>
+						<dl class="on">
+							<dt>
+								<button><img src="img/tab_welface01.png" alt="집아이콘"/><span>일자리,주거</span></button>
+							</dt>
+							<dd>
+								<ul class="list">
+									<li><a href="#"><strong>일자리찾기</strong></a></li>
+									<li><a href="#"><strong>일자리지원사업</strong></a></li>
+									<li><a href="#"><strong>주거비</strong>지원사업</a></li>
+									<li><a href="#"><strong>전세대출금</strong>이자지원</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<button><img src="img/tab_welface02.png" alt="신랑신부아이콘"/><span>결혼,임신,출산</span></button>
+							</dt>
+							<dd>
+								<ul class="list">
+									<li><a href="#"><strong>임산부</strong>지원</a></li>
+									<li><a href="#"><strong>영유아</strong>지원</a></li>
+									<li><a href="#"><strong>예방</strong>접종</a></li>
+									<li><a href="#"><strong>출산장려</strong>지원</a></li>
+								</ul>
+							</dd>
+						</dl>
+						<dl>
+							<dt>
+								<button><img src="img/tab_welface03.png" alt="신랑신부아이콘"/><span>보육,교육</span></button>
+							</dt>
+							<dd>
+								<ul class="list">
+									<li><a href="#"><strong>보육료</strong>지원</a></li>
+									<li><a href="#"><strong>양육수당</strong>지원</a></li>
+									<li><a href="#"><strong>초등돌봄</strong>기관</a></li>
+									<li><a href="#"><strong>교육</strong>지원사업</a></li>
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<div id="main_side">
+				<div class="container">
+					<div id="main_sidelink">
+						<div class="control">
+							<button class="slide_prev">이전</button>
+							<button class="slide_next">다음</button>
+							<button class="slide_pause">일시정지</button>
+							<button class="slide_play">자동재생</button>
+						</div>
+						<div class="slider-wrap">
+							<a href="#"><strong>시화호지속가능파트너십</strong></a>
+							<a href="#"><strong>대통령 직속 일자리위원회</strong></a>
+							<a href="#"><strong>신용회복위원회</strong></a>
+							<a href="#"><strong>법령-조례 원클릭 서비스</strong></a>
+							<a href="#"><strong>일자리매칭시스템 KICOXJOB</strong></a>
+							<a href="#"><strong>음식물쓰레기줄이기</strong></a>
+							<a href="#"><strong>학생안전지도 아이쉴드</strong></a>
+							<a href="#"><strong>한국전기안전공사</strong></a>
+							<a href="#"><strong>생활안전지도</strong></a>
+							<a href="#"><strong>국가균형발전위원회</strong></a>
+							<a href="#"><strong>시흥시 사회적경제지원센터</strong></a>
+							<a href="#"><strong>자동차민원 대국민포털</strong></a>
+							<a href="#"><strong>성범죄자알림이</strong></a>
+							<a href="#"><strong>시흥시 학교급식지원센터</strong></a>
+							<a href="#"><strong>전국 실시간 대기오염정보</strong></a>
+							<a href="#"><strong>시흥시 장애인가족지원센터</strong></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div><!-- id="main" -->
+		
+		<div id="footer">
+			<div class="foot_site">
+				<div class="container">
+					<h2 class="ir_so">관련기관 바로가기</h2>
+					<ul class="familysite clFix">
+						<li><a href="#">패밀리 사이트</a></li>
+						<li><a href="#">시민</a></li>
+						<li><a href="#">사업자</a></li>
+						<li><a href="#">관광객</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="foot_info clFix">
+				<div class="logo">시흥시 로고</div>
+				<div class="info">
+					<ul class="policy clFix">
+						<li><a href="#"><em><strong>개인정보처리방침</strong></em></a>
+						</li>
+						<li><a href="#">영상정보처리기기운영방침</a></li>
+						<li><a href="#">저작권정책</a></li>
+						<li><a href="#">사이트맵</a></li>
+						<li><a href="#">오시는길</a></li>
+					</ul>
+					<ul class="contact clFix">
+						<li>
+							<address>(우 14998) 경기도 시흥시 시청로 20 (장현동)</address>
+						</li>
+						<li>
+							<a href="tel:031-310-2114">TEL : 031-310-2114</a>
+						</li>
+						<li>FAX : 031-380-5300</li>
+					</ul>
+					<small>COPYRIGHT © 2019. <span>SIHEUNG CITY.</span> All RIGHTS RESERVED.</small>
+				</div>
+				<div class="award_mark">
+					<a href="#"><img src="img/web_award.png" alt="WEB AWARD 19 WINNER"/></a>
+				</div>
+				<div class="wa_mark">
+					<a href="#"><img src="img/wa_mark.png" alt="(사)한국장애인단체총연합회 한국웹접근성평가원 웹 접근성 우수사이트 인증마크(WA인증마크)"/></a>
+				</div>
+			</div>
+		</div><!-- id="footer" -->
+	</div>
+</body>
+</html>
