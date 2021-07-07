@@ -1,6 +1,6 @@
 .container {
   height: inherit;
-  width: 349px;
+  width: 351px;
   margin: 0 auto;
   position: relative;
 }
@@ -59,7 +59,7 @@ footer {
   padding-top: 22px;
 }
 
-#topMenu .right .search-btn, #topMenu .right .basket-btn {
+#topMenu .right .search-btn, #topMenu .right .basket-btn, #topMenu .right .back-btn {
   display: inline-block;
 }
 
