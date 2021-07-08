@@ -4,8 +4,8 @@
 }
 
 #main {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(75%, #70ceff), to(#002363));
-  background: linear-gradient(#fff 25%, #70ceff 75%, #002363);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(70%, #70ceff), to(#002363));
+  background: linear-gradient(#fff 25%, #70ceff 70%, #002363);
 }
 
 #home {
@@ -255,13 +255,17 @@ h2 {
   width: 80%;
 }
 
+.project .bg {
+  position: relative;
+}
+
 .project .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -269,21 +273,31 @@ h2 {
   font-size: 20px;
   text-align: center;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
-.project .name li {
-  width: 15%;
-}
-
-.project .name li.on a {
-  color: #fff;
-}
-
-.project .name li a {
+.project .name a {
   display: block;
-  -webkit-transition: .3s;
-  transition: .3s;
+  color: #222;
+  position: relative;
+  z-index: 3;
+}
+
+.project .name a:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 40%;
+  width: 0;
+  height: 35%;
+  background-color: rgba(255, 255, 255, 0.6);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  z-index: -1;
+}
+
+.project .name a:hover:after, .project .name a.on:after {
+  width: 110%;
 }
 
 .project .view {
@@ -295,6 +309,8 @@ h2 {
   width: 100%;
   height: 580px;
   position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
   top: 0;
   left: 0;
   display: none;

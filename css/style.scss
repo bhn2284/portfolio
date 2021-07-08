@@ -4,7 +4,7 @@ $light-blue:#70ceff;
 $dark-blue:#002363;
 
 #wrap{width:100%; margin:0 auto;}
-#main{background: linear-gradient(#fff 25%, $light-blue 75%, $dark-blue);}
+#main{background: linear-gradient(#fff 25%, $light-blue 70%, $dark-blue);}
 #home{position:relative; height:100vh; background:url(../img/sea.jpg) no-repeat center; background-size: cover; z-index:1;
     &::after{content: ''; position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(transparent 60%, #fff);}
 }
@@ -130,19 +130,19 @@ h2{
 }
 
 .project{
+    .bg{position:relative; }
     .name{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
         flex-direction: row;
         font-size:20px;
         text-align:center;
         font-weight:bold;
-        margin-bottom:30px;
-        li{width:15%;
-            &.on{
-                a{color:#fff;}
-            }
-            a{display: block; transition: .3s}
+        margin-bottom:60px;
+        a{
+            display: block; color:#222; position:relative; z-index:3;
+            &:after{content:''; display: block; position:absolute; top:40%;  width:0; height:35%; background-color:rgba(255,255,255,.6); transition: all .3s ease-in-out; z-index:-1;}
+            &:hover:after,&.on:after{width:110%;}
         }
     }
     .view{
@@ -152,6 +152,8 @@ h2{
             width:100%;
             height:580px;
             position:absolute;
+            background:rgba(255,255,255,.5);
+            border-radius:20px;
             top:0; left:0;
             display: none;
             &.on{display: block;}
