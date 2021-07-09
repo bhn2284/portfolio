@@ -70,7 +70,7 @@ h2 {
   color: #425a73;
   font-weight: 800;
   text-align: center;
-  font-family: 'Oleo Script';
+  font-family: 'Kaushan Script';
   padding: 40px 0 50px 0;
 }
 
@@ -83,7 +83,7 @@ h2 {
 
 .logo a {
   display: block;
-  font-family: 'Oleo Script';
+  font-family: 'Kaushan Script';
   font-size: 25px;
   color: #fff;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
@@ -138,7 +138,7 @@ h2 {
 .home h1 {
   font-size: 130px;
   color: #014477;
-  text-shadow: 1px 1px 50px #fff;
+  text-shadow: 1px 1px 30px #fff;
   font-family: 'Kaushan Script', sans-serif;
   font-weight: 800;
   position: absolute;
@@ -152,7 +152,7 @@ h2 {
 .home p {
   font-size: 38px;
   color: rgba(255, 255, 255, 0.9);
-  font-family: 'Oleo Script',sans-serif;
+  font-family: 'Kaushan Script',sans-serif;
   text-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   font-style: italic;
   text-align: left;
@@ -241,6 +241,7 @@ h2 {
           flex-direction: column;
   text-align: center;
   width: 12%;
+  font-weight: bold;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;

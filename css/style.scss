@@ -19,7 +19,7 @@ h2{
     color:#425a73;
     font-weight:800; 
     text-align: center; 
-    font-family: 'Oleo Script';
+    font-family: 'Kaushan Script';
     // -webkit-text-stroke:1px $dark-blue; 
     padding:40px 0 50px 0;
 }
@@ -28,7 +28,7 @@ h2{
     top:45px; 
     left:50px; 
     z-index:500;
-    a{display: block; font-family: 'Oleo Script'; font-size:25px; color:#fff; text-shadow: 0 0 30px rgba(0,0,0,.5);}
+    a{display: block; font-family: 'Kaushan Script'; font-size:25px; color:#fff; text-shadow: 0 0 30px rgba(0,0,0,.5);}
 }
 .gnb-menu{
     position:fixed; 
@@ -60,7 +60,7 @@ h2{
         font-size:130px;
         color:#014477;
         // -webkit-text-stroke:1px #fff; 
-        text-shadow:1px 1px 50px #fff;
+        text-shadow:1px 1px 30px #fff;
         font-family: 'Kaushan Script', sans-serif;
         font-weight:800;
         position:absolute;
@@ -73,7 +73,7 @@ h2{
     p{
         font-size:38px;
         color:rgba(255,255,255,.9);
-        font-family: 'Oleo Script',sans-serif;
+        font-family: 'Kaushan Script',sans-serif;
         text-shadow: 0 0 30px rgba(0,0,0,.5);
         font-style: italic;
         text-align: left;
@@ -118,6 +118,7 @@ h2{
                         flex-direction: column;
                         text-align: center;
                         width:12%;
+                        font-weight: bold;
                         align-items: center;
                         justify-content:space-between;
                         span{padding-top:10px;}
