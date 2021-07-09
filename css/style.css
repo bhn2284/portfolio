@@ -456,6 +456,10 @@ h2 {
   font-weight: bold;
 }
 
+.contact .intro p {
+  color: #fff;
+}
+
 .fish {
   background-image: url(../img/fish.png);
   width: 235px;
