@@ -10,9 +10,9 @@ $dark-blue:#002363;
 }
 #canvas{width:100%; position:fixed; top:0px; left:0;}
 #about{position:relative; height:100vh; min-height:969px;}
-#project{position:relative; height:100vh; min-height:969px;}
-#contact{position:relative; height:95vh; overflow: hidden; min-height:969px;}
-#footer{position:relative; height:5vh; background:$dark-blue;}
+#project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
+#contact{position:relative; height:93vh;}
+#footer{position:relative; height:7vh; background:$dark-blue;}
 .container{width:1200px; margin:0 auto; position:relative; height:inherit;}
 h2{
     font-size:80px; 
@@ -193,17 +193,7 @@ h2{
         }
     }
 }
-.contact{
-    .fish{
-        background-image: url(../img/fish.png);
-        width:235px;
-        height:104px;
-        margin-left:-235px;
-        position:absolute;
-        animation: fish 24s infinite linear;
-        &.fish1{top:40%;}
-        &.fish2{top:75%; animation-delay: 12s;}
-    }
+.contact{ overflow: hidden;
     form{
         margin: 0 auto;
         width: 500px;
@@ -239,6 +229,16 @@ h2{
         }
     }
 }
+.fish{
+    background-image: url(../img/fish.png);
+    width:235px;
+    height:104px;
+    margin-left:-235px;
+    position:absolute;
+    animation: fish 24s infinite linear;
+    &.fish1{top:40%;}
+    &.fish2{top:75%; animation-delay: 12s;}
+}
 @keyframes fish{
 	0% {margin-left: -235px}
 	70% {margin-left: 100%;}
@@ -246,10 +246,7 @@ h2{
 }
 .footer{
     text-align:center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    a{display: block; color:#fff; font-size:16px; font-weight: bold;} 
-    p{color:#fff; font-size:16px;}
+    color:#fff;
+    font-size:14px;
+    address{line-height:25px; position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
 }
