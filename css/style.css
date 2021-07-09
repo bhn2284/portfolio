@@ -37,17 +37,20 @@
 #about {
   position: relative;
   height: 100vh;
+  min-height: 969px;
 }
 
 #project {
   position: relative;
   height: 100vh;
+  min-height: 969px;
 }
 
 #contact {
   position: relative;
   height: 95vh;
   overflow: hidden;
+  min-height: 969px;
 }
 
 #footer {
@@ -276,27 +279,27 @@ h2 {
   margin-bottom: 60px;
 }
 
-.project .name a {
+.project .name li a {
   display: block;
-  color: #222;
   position: relative;
   z-index: 3;
 }
 
-.project .name a:after {
+.project .name li a:after {
   content: '';
   display: block;
   position: absolute;
   top: 40%;
+  left: -5%;
   width: 0;
-  height: 35%;
+  height: 50%;
   background-color: rgba(255, 255, 255, 0.6);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: -1;
 }
 
-.project .name a:hover:after, .project .name a.on:after {
+.project .name li.on a:after, .project .name li a:hover:after {
   width: 110%;
 }
 

@@ -11,7 +11,7 @@
   var bubbles = [];
   var bubbleCount = 30;
   var bubbleSpeed = 1;
-  var popLines = 6;
+  var popLines = 8;
   var popDistance = 40;
   var mouseOffset = {
     x: 0,

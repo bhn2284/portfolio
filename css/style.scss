@@ -9,9 +9,9 @@ $dark-blue:#002363;
     &::after{content: ''; position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(transparent 60%, #fff);}
 }
 #canvas{width:100%; position:fixed; top:0px; left:0;}
-#about{position:relative; height:100vh;}
-#project{position:relative; height:100vh; }
-#contact{position:relative; height:95vh; overflow: hidden;}
+#about{position:relative; height:100vh; min-height:969px;}
+#project{position:relative; height:100vh; min-height:969px;}
+#contact{position:relative; height:95vh; overflow: hidden; min-height:969px;}
 #footer{position:relative; height:5vh; background:$dark-blue;}
 .container{width:1200px; margin:0 auto; position:relative; height:inherit;}
 h2{
@@ -139,10 +139,12 @@ h2{
         text-align:center;
         font-weight:bold;
         margin-bottom:60px;
-        a{
-            display: block; color:#222; position:relative; z-index:3;
-            &:after{content:''; display: block; position:absolute; top:40%;  width:0; height:35%; background-color:rgba(255,255,255,.6); transition: all .3s ease-in-out; z-index:-1;}
-            &:hover:after,&.on:after{width:110%;}
+        li{
+            a{
+                display: block; position:relative; z-index:3;
+                &:after{content:''; display: block; position:absolute; top:40%; left:-5%; width:0; height:50%; background-color:rgba(255,255,255,.6); transition: all .3s ease-in-out; z-index:-1;}
+            }
+            &.on a:after, a:hover:after{width:110%;}
         }
     }
     .view{
