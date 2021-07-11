@@ -138,7 +138,7 @@
 
       if(!this.popping) {
         ctx.beginPath();
-        ctx.strokeStyle = '#8bc9ee';
+        ctx.strokeStyle = '#fff';
         ctx.lineWidth = 1;
         ctx.arc(0, 0, this.radius - 3, 0, Math.PI*1.5, true);
         ctx.stroke();
