@@ -1,4 +1,5 @@
 {
     "diffEditor.wordWrap": "on",
-    "liveServer.settings.multiRootWorkspaceName": "portfolio"
+    "liveServer.settings.multiRootWorkspaceName": "portfolio",
+    "git.ignoreLimitWarning": true
 }
