@@ -581,6 +581,10 @@ footer {
   background: #dedede;
 }
 
+#main section:not(:last-child) {
+  margin-bottom: 5px;
+}
+
 #main section#join-wrap {
   height: 60px;
   background: #fff;
