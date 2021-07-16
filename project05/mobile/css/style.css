@@ -39,6 +39,12 @@ footer {
   margin-top: 25px;
 }
 
+#topMenu .back-btn {
+  float: left;
+  width: 26px;
+  margin-top: 22px;
+}
+
 #topMenu .logo {
   position: absolute;
   top: 50%;
@@ -56,15 +62,25 @@ footer {
 
 #topMenu .right {
   float: right;
-  padding-top: 22px;
+  padding-top: 20px;
 }
 
-#topMenu .right .search-btn, #topMenu .right .basket-btn, #topMenu .right .back-btn {
+#topMenu .right .search-btn, #topMenu .right .basket-btn {
   display: inline-block;
 }
 
 #topMenu .right .basket-btn {
   margin-left: 10px;
+}
+
+#topMenu h1 {
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  left: 35px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 #bottomMenu {
@@ -559,5 +575,28 @@ footer {
   font-size: 10px;
   text-align: center;
   margin-top: 6px;
+}
+
+#main section {
+  background: #dedede;
+}
+
+#main section#join-wrap {
+  height: 60px;
+  background: #fff;
+}
+
+#main section#join-wrap h2 {
+  font-size: 12px;
+  line-height: 60px;
+  float: left;
+}
+
+#main section#join-wrap h2 span {
+  font-weight: bold;
+}
+
+#main section#join-wrap ul {
+  float: right;
 }
 /*# sourceMappingURL=style.css.map */

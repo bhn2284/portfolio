@@ -36,13 +36,14 @@
     ?>
     <header>
         <div id="topMenu">
-            <div class="container cf">
+            <div class="container">
                 <div class="back-btn">
-                    <a href="#">
+                    <a href="javascript:history.back()">
                         <span class="ir_pm">뒤로가기</span>
                         <img src="img/back.png" alt="뒤로가기">
                     </a>
                 </div>
+                <h1>마이페이지</h1>
                 <div class="right">
                     <a href="#" class="search-btn">
                         <span class="ir_pm">검색</span>
@@ -65,29 +66,30 @@
             </ul>
         </div>
     </header>
-    <main>
-        <div id="top">
-            
-            <ul id="top_menu">
-            <?php
-                if(!$userid){
-            ?>
-                <li><a href="member_form.php">회원가입</a></li>
-                <li> | </li>
-                <li><a href="login_form.php">로그인</a></li>
-            <?php
-                }else{
-                    $logged=$username."님 환영합니다";
-                
-            ?>
-                <li><?=$logged?></li>
-                <li> | </li>
-                <li><a href="logout.php">로그아웃</a></li>
-            <?php
-                }
-            ?>
-        </ul>
-</div>
+    <main id="main" class="main">
+        <div class="container">
+            <section id="join-wrap">
+                <h2><span>로그인</span>하고 즐거운 쇼핑하세요 :)</h2>
+                <ul>
+                <?php
+                    if(!$userid){
+                ?>
+                    <li><a href="member_form.php">회원가입</a></li>
+                    <li><a href="login_form.php">로그인</a></li>
+                <?php
+                    }else{
+                        $logged=$username."님 환영합니다";
+                    
+                ?>
+                    <li><?=$logged?></li>
+                    <li> | </li>
+                    <li><a href="logout.php">로그아웃</a></li>
+                <?php
+                    }
+                ?>
+                </ul>
+            </section>
+        </div>
     </main>
 </body>
 </html>
