@@ -201,7 +201,6 @@ h2{
     .intro{
         padding:50px; width:100%;
         p{color:#fff; font-size:18px; line-height:150%}
-        
     }
     .contact-info{
         position:relative;
@@ -220,12 +219,12 @@ h2{
                 text-align: center;
                 align-items: center;
                 justify-content:space-between;
-                a{display: block; width:80px; color:rgba(255,255,255,0.8);
-                &:hover{color:#fff}}
+                a{
+                    display: block; width:80px; color:rgba(255,255,255,0.8);
+                    &:hover{color:#fff}
+                }
             }
         }
-        
-        
     }
 }
 .fish{
