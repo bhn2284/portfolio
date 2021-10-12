@@ -1,16 +1,19 @@
 #wrap {
   width: 100%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 #main {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(25%, #fff), color-stop(70%, #70ceff), to(#002363));
   background: linear-gradient(#fff 25%, #70ceff 70%, #002363);
+  width: 100%;
 }
 
 #home {
   position: relative;
   height: 100vh;
+  width: 100%;
   background: url(../img/sea.jpg) no-repeat center;
   background-size: cover;
   z-index: 1;
@@ -402,84 +405,75 @@ h2 {
           box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+.contact h2 {
+  color: white;
+}
+
 .contact .contact-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.contact form {
-  width: 500px;
-  color: white;
-  position: relative;
-}
-
-.contact form label {
-  font-size: 18px;
-  margin-top: 20px;
-  padding-left: 20px;
-}
-
-.contact form input, .contact form textarea {
-  width: 500px;
-  border-radius: 20px;
-  outline: none;
-  padding: 10px;
-  margin: 10px 0;
-  color: #676767;
-  border: solid 3px #fff;
-  -webkit-transition: border 0.5s;
-  transition: border 0.5s;
-}
-
-.contact form input:focus, .contact form textarea:focus {
-  border: 3px solid #77bde0;
-}
-
-.contact form textarea {
-  height: 100px;
-  resize: none;
-  overflow: auto;
-}
-
-.contact form input[type="submit"] {
-  background-color: #ffae00;
-  color: white;
-  height: 50px;
-  cursor: pointer;
-  margin-top: 30px;
-  font-size: 20px;
-  -webkit-transition: background-color 0.5s;
-  transition: background-color 0.5s;
-}
-
-.contact form input[type="submit"]:hover {
-  background-color: #db8a0f;
-}
-
-.contact form .formgroup-error {
-  color: red;
-  font-weight: bold;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .contact .intro {
   padding: 50px;
+  width: 100%;
 }
 
 .contact .intro p {
   color: #fff;
-  font-size: 16px;
-  text-align: right;
+  font-size: 18px;
   line-height: 150%;
 }
 
-.contact .intro a {
+.contact .contact-info {
+  position: relative;
+}
+
+.contact .contact-info ul {
+  position: absolute;
+  right: 0;
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 18px;
+  margin-top: 60px;
+}
+
+.contact .contact-info ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 20%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .contact-info ul li a {
   display: block;
-  width: 50px;
+  width: 80px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contact .contact-info ul li a:hover {
+  color: #fff;
 }
 
 .fish {
