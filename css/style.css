@@ -427,36 +427,32 @@ h2 {
 .contact .intro p {
   color: #fff;
   font-size: 18px;
-  line-height: 150%;
+  line-height: 200%;
 }
 
-.contact .contact-info {
-  position: relative;
-}
-
-.contact .contact-info ul {
+.contact .intro ul {
   position: absolute;
-  right: 0;
-  width: 60%;
+  right: 35px;
+  margin-top: 30px;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  text-align: right;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 18px;
-  margin-top: 60px;
 }
 
-.contact .contact-info ul li {
+.contact .intro ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 20%;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -466,14 +462,33 @@ h2 {
           justify-content: space-between;
 }
 
-.contact .contact-info ul li a {
+.contact .intro ul li.email {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact .intro a {
   display: block;
   width: 80px;
   color: rgba(255, 255, 255, 0.8);
+  font-size: 16px;
 }
 
-.contact .contact-info ul li a:hover {
+.contact .intro a img {
+  width: 70%;
+}
+
+.contact .intro a:hover {
   color: #fff;
+}
+
+.contact .intro a.email {
+  margin-top: 70px;
+  width: 100%;
+  font-size: 20px;
+  text-align: right;
 }
 
 .fish {
