@@ -157,6 +157,7 @@ nav{
     }
     .consulting,.review{@include content(left,460px); margin-top:40px}
     .swiper-container{
+        overflow:hidden;
         @include content(left,360px); height:240px; cursor: pointer;
         .swiper-slide{float: left;}
     }
@@ -316,6 +317,7 @@ nav{
 }
 .foot-banner{
     position:relative;
+    overflow: hidden;
     @include content(left, 360px);
     height:205px;
     background: #181818;
