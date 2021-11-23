@@ -216,7 +216,6 @@ h2{
                 text-align: center;
                 align-items: center;
                 justify-content:space-between;
-                &.email{flex-direction: column;}
             }
         }
         a{
@@ -225,7 +224,7 @@ h2{
             font-size:16px;
             img{width:70%}
             &:hover{color:#fff}
-            &.email{margin-top:70px; width:100%; font-size:20px; text-align:right;}
+            &.email{margin-top:70px; margin-left:70%; font-size:20px;}
         }
     }
 }
