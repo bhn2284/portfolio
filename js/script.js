@@ -23,6 +23,7 @@ $(window).scroll(function(){
             menu.eq(i).addClass('on');
         }
     });
+    
 });
 
 // project tab menu
