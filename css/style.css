@@ -56,7 +56,7 @@
 
 h2 {
   font-size: 50px;
-  color: #002363;
+  color: #1767AE;
   font-weight: 800;
   text-align: center;
   font-family: 'RixYeoljeongdo_Regular', normal;
@@ -119,13 +119,13 @@ h2 {
 }
 
 .gnb-menu .gnb li a {
-  color: #002363;
+  color: #1767AE;
   font-weight: 800;
 }
 
 .home h1 {
   font-size: 110px;
-  color: #cccccc;
+  color: #a3abbd;
   font-family: 'RixYeoljeongdo_Regular', normal;
   position: absolute;
   width: 100%;
@@ -137,7 +137,7 @@ h2 {
 
 .home p {
   font-size: 70px;
-  color: #002363;
+  color: #1767AE;
   font-family: 'RixYeoljeongdo_Regular', normal;
   text-align: right;
   position: absolute;
@@ -200,7 +200,7 @@ h2 {
 }
 
 .about .center .content h4 {
-  color: #002363;
+  color: #1767AE;
   font-weight: 800;
   font-size: 18px;
   margin-top: 40px;
@@ -246,10 +246,6 @@ h2 {
 
 .about .center .content .skills ul li img {
   width: 70%;
-}
-
-.project .bg {
-  position: relative;
 }
 
 .project .name {
@@ -334,7 +330,7 @@ h2 {
 }
 
 .project .view li h4 {
-  color: #002363;
+  color: #1767AE;
   font-size: 18px;
   width: 100px;
 }
@@ -354,8 +350,8 @@ h2 {
   font-weight: 800;
   display: block;
   text-transform: uppercase;
-  color: #002363;
-  border: 2px solid #002363;
+  color: #1767AE;
+  border: 2px solid #1767AE;
   border-radius: 5px;
   height: 45px;
   font-size: 16px;
@@ -368,7 +364,7 @@ h2 {
 }
 
 .project .view li .view-btn:hover {
-  background: #002363;
+  background: #1767AE;
   color: #fff;
 }
 
@@ -423,7 +419,7 @@ h2 {
   padding-top: 20px;
   font-size: 40px;
   font-weight: 600;
-  color: #002363;
+  color: #1767AE;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
