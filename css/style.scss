@@ -37,10 +37,9 @@ $desktop:1400px;
   }
 #wrap{width:100%; margin:0 auto; overflow:hidden; background:$white;}
 #main{width:100%;}
-#home{position:relative; height:100vh; width:100%;}
-// #home{position:relative; height:100vh; width:100%; background:url(../img/sea.jpg) no-repeat center; background-size: cover; z-index:1;
+#home{position:relative; height:100vh; width:100%;
 //     &::after{content: ''; position:absolute; top:0; left:0; right:0; bottom:0; background:linear-gradient(transparent 60%, #fff);}
-// }
+}
 #about{position:relative; height:100vh; min-height:969px;}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
@@ -88,15 +87,17 @@ h2{
     }
 }
 .home{
+    .bg1{width:800px; position:absolute; left:-95px; top:50%; transform:translate(0,-50%); border-radius:50%;}
+    .bg2{width:550px; position:absolute; right:-100px; top:100px; border-radius:50%;}
     h1{
         font-size:110px;
-        color:$gray;
-        // -webkit-text-stroke:1px #000;
+        color:$white;
+        -webkit-text-stroke:1px #000;
         font-family: 'RixYeoljeongdo_Regular', normal;
         position:absolute;
         width:100%;
         top:20%;
-        left:-5%;
+        left:-10%;
         text-align: left;
         z-index:1;
     }
@@ -106,10 +107,10 @@ h2{
         font-family: 'RixYeoljeongdo_Regular', normal;
         text-align:right;
         position:absolute;
-        right:0;
+        right:-200px;
         word-wrap:break-word;
         text-transform: uppercase;
-        bottom:20%;
+        bottom:15%;
         span{color:$yellow;}
     }   
 }

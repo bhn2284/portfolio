@@ -123,14 +123,33 @@ h2 {
   font-weight: 800;
 }
 
+.home .bg1 {
+  width: 800px;
+  position: absolute;
+  left: -95px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  border-radius: 50%;
+}
+
+.home .bg2 {
+  width: 550px;
+  position: absolute;
+  right: -100px;
+  top: 100px;
+  border-radius: 50%;
+}
+
 .home h1 {
   font-size: 110px;
-  color: #a3abbd;
+  color: #fff;
+  -webkit-text-stroke: 1px #000;
   font-family: 'RixYeoljeongdo_Regular', normal;
   position: absolute;
   width: 100%;
   top: 20%;
-  left: -5%;
+  left: -10%;
   text-align: left;
   z-index: 1;
 }
@@ -141,10 +160,10 @@ h2 {
   font-family: 'RixYeoljeongdo_Regular', normal;
   text-align: right;
   position: absolute;
-  right: 0;
+  right: -200px;
   word-wrap: break-word;
   text-transform: uppercase;
-  bottom: 20%;
+  bottom: 15%;
 }
 
 .home p span {
