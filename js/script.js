@@ -14,16 +14,28 @@ menu.click(function(e){
 
 //스크롤하면 메뉴색 바뀜
 $(window).scroll(function(){
-    var sct=$(window).scrollTop()+300;
+    var sct1=$(window).scrollTop()+300;
+    var sct2=$(window).scrollTop();
+    var offtop=$('#about').offset();
+    console.log(sct2);
+    
     content.each(function(){
         var tg=$(this);
         var i=tg.index();
-        if(tg.offset().top<=sct){
+        if(tg.offset().top<=sct1){
             menu.removeClass('on');
             menu.eq(i).addClass('on');
         }
     });
     
+    //스크롤하면 로고 변경
+    if(sct2>offtop.top-500){
+        $('.img-logo').addClass('on');
+        $('.logo').addClass('on');
+    }else{
+        $('.img-logo').removeClass('on');
+        $('.logo').removeClass('on');
+    }
 });
 
 // project tab menu
