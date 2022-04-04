@@ -8,10 +8,12 @@
 }
 
 //Break Point
-$blue:#1767AE;
+$blue:#1767ae;
+$light-blue:#609ae6;
 $white:#fff;
 $yellow:#ffba00;
 $gray:#f8f8f8;
+$black:#000;
 $tablet:768px;
 $laptop:1020px;
 $desktop:1400px;
@@ -44,14 +46,13 @@ $desktop:1400px;
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
 #footer{position:relative; height:7vh; background:$yellow;}
-.container{width:1200px; margin:0 auto; position:relative; height:inherit;}
+.container{width:1320px; margin:0 auto; position:relative; height:inherit;}
 h2{
-    font-size:50px; 
+    font-size:36px; 
     color:$blue;
-    font-weight:800; 
     text-align: center; 
-    font-family: 'RixYeoljeongdo_Regular', normal;
-    padding:70px 0 50px 0;
+    font-family: 'RixYeoljeongdo_Regular';
+    padding:60px 0 30px 0;
 }
 .logo{
     position:fixed;
@@ -104,12 +105,12 @@ h2{
     h1{
         font-size:110px;
         color:$gray;
-        -webkit-text-stroke:1.3px #000;
+        -webkit-text-stroke:1.3px $black;
         font-family: 'RixYeoljeongdo_Regular', normal;
         position:absolute;
         width:100%;
         top:20%;
-        left:-10%;
+        left:-100PX;
         text-align: left;
         z-index:1;
     }
@@ -119,7 +120,7 @@ h2{
         font-family: 'RixYeoljeongdo_Regular', normal;
         text-align:right;
         position:absolute;
-        right:-200px;
+        right:-100px;
         word-wrap:break-word;
         text-transform: uppercase;
         bottom:15%;
@@ -127,15 +128,16 @@ h2{
     }   
 }
 .about{
-    .center{
+    background-color:#dff1ff;
+    .about-box{
         display:flex; 
         justify-content:space-between; 
         flex-direction: row;
-        border:1px solid $white; 
-        box-shadow: 0 0 50px #000; 
-        border-radius:50px; 
+        // border:1px solid $blue; 
+        box-shadow: 3px 3px #609ae6; 
+        border-radius:30px; 
         padding:50px; 
-        background:rgba(0,0,0,.1);
+        background:$white;
         .profile{
             width:350px;
             img{border-radius: 50%;}
@@ -231,7 +233,7 @@ h2{
             .moniter{
                 position:absolute;top:80px; right:80px; 
                 .website{
-                    a{display: block; position:relative; width:30vw; height:20vh;min-width:450px; min-height:380px; overflow: hidden; border-radius: 10px; box-shadow:0px 0px 10px rgba(#000,0.5);}
+                    a{display: block; position:relative; width:30vw; height:20vh;min-width:450px; min-height:380px; overflow: hidden; border-radius: 10px; box-shadow:0px 0px 10px rgba($black,0.5);}
                 }
             }
         }

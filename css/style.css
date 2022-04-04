@@ -48,19 +48,18 @@
 }
 
 .container {
-  width: 1200px;
+  width: 1320px;
   margin: 0 auto;
   position: relative;
   height: inherit;
 }
 
 h2 {
-  font-size: 50px;
-  color: #1767AE;
-  font-weight: 800;
+  font-size: 36px;
+  color: #1767ae;
   text-align: center;
-  font-family: 'RixYeoljeongdo_Regular', normal;
-  padding: 70px 0 50px 0;
+  font-family: 'RixYeoljeongdo_Regular';
+  padding: 60px 0 30px 0;
 }
 
 .logo {
@@ -138,7 +137,7 @@ h2 {
 }
 
 .gnb-menu .gnb li a {
-  color: #1767AE;
+  color: #1767ae;
   font-weight: 800;
 }
 
@@ -168,18 +167,18 @@ h2 {
   position: absolute;
   width: 100%;
   top: 20%;
-  left: -10%;
+  left: -100PX;
   text-align: left;
   z-index: 1;
 }
 
 .home p {
   font-size: 70px;
-  color: #1767AE;
+  color: #1767ae;
   font-family: 'RixYeoljeongdo_Regular', normal;
   text-align: right;
   position: absolute;
-  right: -200px;
+  right: -100px;
   word-wrap: break-word;
   text-transform: uppercase;
   bottom: 15%;
@@ -189,7 +188,11 @@ h2 {
   color: #ffba00;
 }
 
-.about .center {
+.about {
+  background-color: #dff1ff;
+}
+
+.about .about-box {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -200,56 +203,55 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid #fff;
-  -webkit-box-shadow: 0 0 50px #000;
-          box-shadow: 0 0 50px #000;
-  border-radius: 50px;
+  -webkit-box-shadow: 3px 3px #609ae6;
+          box-shadow: 3px 3px #609ae6;
+  border-radius: 30px;
   padding: 50px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #fff;
 }
 
-.about .center .profile {
+.about .about-box .profile {
   width: 350px;
 }
 
-.about .center .profile img {
+.about .about-box .profile img {
   border-radius: 50%;
 }
 
-.about .center .content {
+.about .about-box .content {
   -webkit-box-flex: 0.9;
       -ms-flex: 0.9;
           flex: 0.9;
 }
 
-.about .center .content h3 {
+.about .about-box .content h3 {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 30px;
 }
 
-.about .center .content > ul li {
+.about .about-box .content > ul li {
   font-size: 18px;
   line-height: 40px;
 }
 
-.about .center .content > ul li span {
+.about .about-box .content > ul li span {
   font-weight: bold;
 }
 
-.about .center .content h4 {
-  color: #1767AE;
+.about .about-box .content h4 {
+  color: #1767ae;
   font-weight: 800;
   font-size: 18px;
   margin-top: 40px;
 }
 
-.about .center .content p {
+.about .about-box .content p {
   font-size: 18px;
   line-height: 40px;
 }
 
-.about .center .content .skills ul {
+.about .about-box .content .skills ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -259,7 +261,7 @@ h2 {
           justify-content: space-between;
 }
 
-.about .center .content .skills ul li {
+.about .about-box .content .skills ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,11 +280,11 @@ h2 {
           justify-content: space-between;
 }
 
-.about .center .content .skills ul li span {
+.about .about-box .content .skills ul li span {
   padding-top: 10px;
 }
 
-.about .center .content .skills ul li img {
+.about .about-box .content .skills ul li img {
   width: 70%;
 }
 
@@ -368,7 +370,7 @@ h2 {
 }
 
 .project .view li h4 {
-  color: #1767AE;
+  color: #1767ae;
   font-size: 18px;
   width: 100px;
 }
@@ -388,8 +390,8 @@ h2 {
   font-weight: 800;
   display: block;
   text-transform: uppercase;
-  color: #1767AE;
-  border: 2px solid #1767AE;
+  color: #1767ae;
+  border: 2px solid #1767ae;
   border-radius: 5px;
   height: 45px;
   font-size: 16px;
@@ -402,7 +404,7 @@ h2 {
 }
 
 .project .view li .view-btn:hover {
-  background: #1767AE;
+  background: #1767ae;
   color: #fff;
 }
 
@@ -457,7 +459,7 @@ h2 {
   padding-top: 20px;
   font-size: 40px;
   font-weight: 600;
-  color: #1767AE;
+  color: #1767ae;
   -webkit-transition: all .3s;
   transition: all .3s;
 }
