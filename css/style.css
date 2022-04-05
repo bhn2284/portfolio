@@ -97,10 +97,9 @@ h2 {
 
 .gnb-menu {
   position: fixed;
-  right: 0;
+  right: 50px;
   top: 0;
   height: 100%;
-  width: 120px;
   z-index: 500;
 }
 
@@ -121,7 +120,6 @@ h2 {
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
-  line-height: 120px;
   font-size: 18px;
   -webkit-transition: letter-spacing .3s;
   transition: letter-spacing .3s;
@@ -142,20 +140,18 @@ h2 {
 }
 
 .home .bg1 {
-  width: 800px;
+  width: 350px;
   position: absolute;
-  left: -95px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+  left: 100px;
+  bottom: 80px;
   border-radius: 50%;
 }
 
 .home .bg2 {
-  width: 500px;
+  width: 800px;
   position: absolute;
-  right: -50px;
-  top: 100px;
+  right: -80px;
+  top: 50px;
   border-radius: 50%;
 }
 
@@ -484,6 +480,50 @@ h2 {
 
 .contact .contact-wrap .contact-info ul li a {
   font-size: 18px;
+}
+
+.fish {
+  background-image: url(../img/fish.png);
+  width: 235px;
+  height: 104px;
+  margin-left: -235px;
+  position: absolute;
+  -webkit-animation: fish 24s infinite linear;
+          animation: fish 24s infinite linear;
+}
+
+.fish.fish1 {
+  top: 40%;
+}
+
+.fish.fish2 {
+  top: 75%;
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+}
+
+@-webkit-keyframes fish {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
+}
+
+@keyframes fish {
+  0% {
+    margin-left: -235px;
+  }
+  70% {
+    margin-left: 100%;
+  }
+  100% {
+    margin-left: 100%;
+  }
 }
 
 .footer {

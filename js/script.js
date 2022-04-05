@@ -29,7 +29,7 @@ $(window).scroll(function(){
     });
     
     //스크롤하면 로고 변경
-    if(sct2>offtop.top-500){
+    if(sct2>offtop.top-50){
         $('.img-logo').addClass('on');
         $('.logo').addClass('on');
     }else{
