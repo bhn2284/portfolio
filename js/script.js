@@ -17,7 +17,6 @@ $(window).scroll(function(){
     var sct1=$(window).scrollTop()+300;
     var sct2=$(window).scrollTop();
     var offtop=$('#about').offset();
-    console.log(sct2);
     
     content.each(function(){
         var tg=$(this);
