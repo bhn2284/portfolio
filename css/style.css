@@ -323,13 +323,6 @@ h2 {
   font-weight: bold;
 }
 
-.about .about-box .content h4 {
-  color: #1767ae;
-  font-weight: 800;
-  font-size: 18px;
-  margin-top: 40px;
-}
-
 .about .about-box .content .skills ul {
   display: -webkit-box;
   display: -ms-flexbox;
