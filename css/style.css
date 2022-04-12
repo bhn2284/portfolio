@@ -20,6 +20,7 @@
   position: relative;
   height: 100vh;
   width: 100%;
+  min-height: 969px;
 }
 
 #about {
@@ -62,7 +63,7 @@ h2 {
   font-size: 36px;
   color: #1767ae;
   text-align: center;
-  padding: 60px 0 30px 0;
+  padding: 60px 0 40px 0;
 }
 
 .logo {
@@ -257,34 +258,31 @@ h2 {
 }
 
 .about .about-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  position: relative;
   -webkit-box-shadow: 3px 3px #609ae6;
           box-shadow: 3px 3px #609ae6;
   border-radius: 30px;
-  padding: 50px;
+  padding: 80px 60px;
+  height: 730px;
   background: #fff;
 }
 
 .about .about-box .profile {
   width: 300px;
+  float: left;
 }
 
-.about .about-box .content {
-  -webkit-box-flex: 0.9;
-      -ms-flex: 0.9;
-          flex: 0.9;
+.about .about-box .content1 p, .about .about-box .content1 li, .about .about-box .content2 li {
+  font-size: 17px;
+  line-height: 25px;
 }
 
-.about .about-box .content h3 {
+.about .about-box .content1 {
+  position: absolute;
+  left: 400px;
+}
+
+.about .about-box .content1 h3 {
   font-size: 24px;
   margin-bottom: 15px;
   font-family: 'RixYeoljeongdo_Regular';
@@ -292,48 +290,37 @@ h2 {
   color: #ffba00;
 }
 
-.about .about-box .content p {
-  font-size: 17px;
-  line-height: 25px;
-}
-
-.about .about-box .content p.name {
+.about .about-box .content1 .name {
   font-weight: 800;
   font-size: 20px;
 }
 
-.about .about-box .content > ul {
-  margin: 55px 0;
+.about .about-box .content1 ul {
+  margin: 90px 0;
 }
 
-.about .about-box .content > ul li {
-  font-size: 18px;
-  line-height: 25px;
+.about .about-box .content2 {
+  position: absolute;
+  right: 50px;
 }
 
-.about .about-box .content > ul li.tit {
-  font-size: 20px;
-  color: #ffba00;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+.about .about-box .content2 ul:first-of-type {
+  margin-bottom: 143px;
 }
 
-.about .about-box .content > ul li span {
-  font-weight: bold;
-}
-
-.about .about-box .content .skills ul {
+.about .about-box .content2 .skills {
+  width: 500px;
+  padding: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 
-.about .about-box .content .skills ul li {
+.about .about-box .content2 .skills li {
+  float: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -342,7 +329,7 @@ h2 {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  width: 12%;
+  width: 18%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -351,13 +338,25 @@ h2 {
           justify-content: space-between;
 }
 
-.about .about-box .content .skills ul li span {
-  padding-top: 10px;
-  font-size: 17px;
+.about .about-box .content2 .skills li span {
+  padding-top: 5px;
+  font-size: 13px;
+  font-family: 'Noto Sans';
+  font-weight: 100;
 }
 
-.about .about-box .content .skills ul li img {
-  width: 70%;
+.about .about-box .content2 .skills li img {
+  width: 55%;
+}
+
+.about .about-box .tit {
+  font-size: 20px !important;
+  color: #ffba00;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  line-height: 25px;
+  font-family: 'RixYeoljeongdo_Regular';
 }
 
 .project .name {

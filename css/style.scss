@@ -39,7 +39,7 @@ $desktop:1400px;
   }
 #wrap{width:100%; margin:0 auto; overflow:hidden; background:$white;}
 #main{width:100%;}
-#home{position:relative; height:100vh; width:100%;}
+#home{position:relative; height:100vh; width:100%; min-height:969px;}
 #about{position:relative; height:100vh; min-height:969px;}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
@@ -50,7 +50,7 @@ h2{
     font-size:36px; 
     color:$blue;
     text-align: center;
-    padding:60px 0 30px 0;
+    padding:60px 0 40px 0;
 }
 .logo{
     position:fixed;
@@ -165,48 +165,54 @@ h2{
 .about{
     background-color:#dff1ff;
     .about-box{
-        display:flex; 
-        justify-content:space-between; 
-        flex-direction:row; 
+        position:relative;
         box-shadow: 3px 3px $light-blue; 
         border-radius:30px; 
-        padding:50px; 
+        padding:80px 60px;
+        height:730px;
         background:$white;
         .profile{
             width:300px;
+            float:left;
         }
-        .content{
-            flex:0.9;
-            h3{font-size:24px; margin-bottom:15px; font-family:'RixYeoljeongdo_Regular'; font-weight:500; color:$yellow;}
-            p{font-size:17px; line-height:25px;
-                &.name{font-weight:800; font-size:20px;}
+        .content1 p,.content1 li,.content2 li{font-size:17px; line-height:25px;}
+        .content1{
+            position:absolute;
+            left:400px;
+            h3{
+                font-size:24px; 
+                margin-bottom:15px; 
+                font-family:'RixYeoljeongdo_Regular'; 
+                font-weight:500; 
+                color:$yellow;
             }
-            >ul{margin:55px 0;
-                li{
-                    font-size:18px; line-height:25px;
-                    &.tit{font-size:20px; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px;}
-                    span{font-weight:bold;}
-                }
-            }
+            .name{font-weight:800; font-size:20px;}
+            ul{margin:90px 0;}
             
+        }
+        .content2{
+            position:absolute;
+            right:50px;
+            ul:first-of-type{margin-bottom:143px;}
             .skills{
-                ul{
+                width:500px;
+                padding:5px 0;
+                display:flex;
+                justify-content:space-between;
+                li{
+                    float:left;
                     display: flex;
-                    padding:10px 0;
+                    flex-direction: column;
+                    text-align: center;
+                    width:18%;
+                    align-items: center;
                     justify-content:space-between;
-                    li{
-                        display: flex;
-                        flex-direction: column;
-                        text-align: center;
-                        width:12%;
-                        align-items: center;
-                        justify-content:space-between;
-                        span{padding-top:10px; font-size:17px;}
-                        img{width:70%}
-                    }
+                    span{padding-top:5px; font-size:13px; font-family:'Noto Sans'; font-weight:100;}
+                    img{width:55%}
                 }
             }
         }
+        .tit{font-size:20px !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px; line-height:25px; font-family: 'RixYeoljeongdo_Regular';}
     }
 }
 
