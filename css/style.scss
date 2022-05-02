@@ -8,8 +8,10 @@
 }
 
 //Break Point
+$yeoljeong:'RixYeoljeongdo_Regular';
 $blue:#1767ae;
 $light-blue:#609ae6;
+$white-blue:#dff1ff;
 $white:#fff;
 $yellow:#ffba00;
 $gray:#f8f8f8;
@@ -40,12 +42,12 @@ $desktop:1400px;
 #wrap{width:100%; margin:0 auto; overflow:hidden; background:$white;}
 #main{width:100%;}
 #home{position:relative; height:100vh; width:100%; min-height:969px;}
-#about{position:relative; height:100vh; min-height:969px;}
+#about{position:relative; height:100vh; min-height:969px; background-color:$white-blue;}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
 #footer{position:relative; height:7vh; background:$yellow;}
 .container{width:1320px; margin:0 auto; position:relative; height:inherit;}
-h1,h2,.logo,.home p{font-family:'RixYeoljeongdo_Regular';}
+h1,h2,.logo,.home p{font-family:$yeoljeong;}
 h2{
     font-size:36px; 
     color:$blue;
@@ -100,8 +102,9 @@ h2{
     .bg2{width:500px; position:absolute; right:-50px; top:100px; border-radius:50%;}
     h1{
         font-size:110px;
-        color:$gray;
-        -webkit-text-stroke:1.3px $black;
+        color:$white;
+        -webkit-text-stroke:1px $blue;
+        text-shadow:3px 3px $blue;
         position:absolute;
         width:100%;
         top:20%;
@@ -163,7 +166,6 @@ h2{
     }
 }
 .about{
-    background-color:#dff1ff;
     .about-box{
         position:relative;
         box-shadow: 3px 3px $light-blue; 
@@ -182,7 +184,7 @@ h2{
             h3{
                 font-size:24px; 
                 margin-bottom:15px; 
-                font-family:'RixYeoljeongdo_Regular'; 
+                font-family:$yeoljeong; 
                 font-weight:500; 
                 color:$yellow;
             }
@@ -212,20 +214,22 @@ h2{
                 }
             }
         }
-        .tit{font-size:20px !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px; line-height:25px; font-family: 'RixYeoljeongdo_Regular';}
+        .tit{font-size:20px !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px; line-height:25px; font-family: $yeoljeong;}
     }
 }
 
 .project{
+    h2{color:$yellow;}
     .name{
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
+        // display: flex;
+        // justify-content:space-evenly;
+        // flex-direction: row;
         font-size:20px;
         text-align:center;
+        // align-items: center;
         font-weight:bold;
         margin-bottom:60px;
-        li{
+        li{display: inline-block; padding:0 15px;
             a{
                 display: block; position:relative; z-index:3;
                 &:after{content:''; display: block; position:absolute; top:40%; left:-5%; width:0; height:50%; background-color:$yellow; transition: all .3s ease-in-out; z-index:-1;}
@@ -236,24 +240,25 @@ h2{
     .view{
         position:relative;
         li{
-            padding:80px;
+            // padding:80px;
             width:100%;
             height:580px;
             position:absolute;
-            background:rgba(0,0,0,.1);
+            top:0;
             border-radius:20px;
-            top:0; left:0;
-            display: none;
+            display:none;
             &.on{display: block;}
+            .project-content{width:430px; position:absolute; top:60px; left:60px;}
+            p{
+                font-size:17px;
+                &.list-p{margin-top:20px; line-height:30px;}
+                &.category{font-size:20px; margin-bottom:5px;}
+            }
             .list{display:flex; flex-direction:row; line-height:30px}
             h3,h4{font-weight:bold;}
             h3{font-size:30px; margin-bottom:30px;}
             h4{color:$blue; font-size:18px; width:100px;}
-            p{
-                font-size:17px;
-                width:420px;
-                &.list-p{margin-top:20px; line-height:30px; word-break: keep-all;}
-            }
+            
             .view-btn{
                 font-weight:800;
                 display:block; 
@@ -271,10 +276,8 @@ h2{
                 &:hover{background:$blue; color:$white;}
             }
             .moniter{
-                position:absolute;top:80px; right:80px; 
-                .website{
-                    a{display: block; position:relative; width:30vw; height:20vh;min-width:450px; min-height:380px; overflow: hidden; border-radius: 10px; box-shadow:0px 0px 10px rgba($black,0.5);}
-                }
+                position:absolute; top:60px; right: 60px;
+                a{display: block; position:relative; width:32vw; height:20vh;min-width:450px; min-height:430px; overflow: hidden; box-shadow:20px 20px 20px 0 rgba(0,0,0,0.3);}
             }
         }
     }

@@ -27,6 +27,7 @@
   position: relative;
   height: 100vh;
   min-height: 969px;
+  background-color: #dff1ff;
 }
 
 #project {
@@ -56,7 +57,7 @@
 }
 
 h1, h2, .logo, .home p {
-  font-family: 'RixYeoljeongdo_Regular';
+  font-family: "RixYeoljeongdo_Regular";
 }
 
 h2 {
@@ -161,8 +162,9 @@ h2 {
 
 .home h1 {
   font-size: 110px;
-  color: #f8f8f8;
-  -webkit-text-stroke: 1.3px #000;
+  color: #fff;
+  -webkit-text-stroke: 1px #1767ae;
+  text-shadow: 3px 3px #1767ae;
   position: absolute;
   width: 100%;
   top: 20%;
@@ -253,10 +255,6 @@ h2 {
   }
 }
 
-.about {
-  background-color: #dff1ff;
-}
-
 .about .about-box {
   position: relative;
   -webkit-box-shadow: 3px 3px #609ae6;
@@ -285,7 +283,7 @@ h2 {
 .about .about-box .content1 h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  font-family: 'RixYeoljeongdo_Regular';
+  font-family: "RixYeoljeongdo_Regular";
   font-weight: 500;
   color: #ffba00;
 }
@@ -356,24 +354,23 @@ h2 {
   text-transform: uppercase;
   margin-bottom: 15px;
   line-height: 25px;
-  font-family: 'RixYeoljeongdo_Regular';
+  font-family: "RixYeoljeongdo_Regular";
+}
+
+.project h2 {
+  color: #ffba00;
 }
 
 .project .name {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   font-size: 20px;
   text-align: center;
   font-weight: bold;
   margin-bottom: 60px;
+}
+
+.project .name li {
+  display: inline-block;
+  padding: 0 15px;
 }
 
 .project .name li a {
@@ -405,19 +402,37 @@ h2 {
 }
 
 .project .view li {
-  padding: 80px;
   width: 100%;
   height: 580px;
   position: absolute;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 20px;
   top: 0;
-  left: 0;
+  border-radius: 20px;
   display: none;
 }
 
 .project .view li.on {
   display: block;
+}
+
+.project .view li .project-content {
+  width: 430px;
+  position: absolute;
+  top: 60px;
+  left: 60px;
+}
+
+.project .view li p {
+  font-size: 17px;
+}
+
+.project .view li p.list-p {
+  margin-top: 20px;
+  line-height: 30px;
+}
+
+.project .view li p.category {
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .project .view li .list {
@@ -446,17 +461,6 @@ h2 {
   width: 100px;
 }
 
-.project .view li p {
-  font-size: 17px;
-  width: 420px;
-}
-
-.project .view li p.list-p {
-  margin-top: 20px;
-  line-height: 30px;
-  word-break: keep-all;
-}
-
 .project .view li .view-btn {
   font-weight: 800;
   display: block;
@@ -481,21 +485,20 @@ h2 {
 
 .project .view li .moniter {
   position: absolute;
-  top: 80px;
-  right: 80px;
+  top: 60px;
+  right: 60px;
 }
 
-.project .view li .moniter .website a {
+.project .view li .moniter a {
   display: block;
   position: relative;
-  width: 30vw;
+  width: 32vw;
   height: 20vh;
   min-width: 450px;
-  min-height: 380px;
+  min-height: 430px;
   overflow: hidden;
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.3);
 }
 
 .contact .contact-wrap {
