@@ -50,7 +50,8 @@
 }
 
 .container {
-  width: 1320px;
+  max-width: 1440px;
+  padding: 0 60px;
   margin: 0 auto;
   position: relative;
   height: inherit;
@@ -64,7 +65,7 @@ h2 {
   font-size: 36px;
   color: #1767ae;
   text-align: center;
-  padding: 60px 0 40px 0;
+  padding: 100px 0 60px 0;
 }
 
 .logo {
@@ -260,13 +261,14 @@ h2 {
   -webkit-box-shadow: 3px 3px #609ae6;
           box-shadow: 3px 3px #609ae6;
   border-radius: 30px;
-  padding: 80px 60px;
-  height: 730px;
+  padding: 90px 50px;
+  height: 600px;
   background: #fff;
 }
 
 .about .about-box .profile {
   width: 300px;
+  height: 420px;
   float: left;
 }
 
@@ -294,7 +296,7 @@ h2 {
 }
 
 .about .about-box .content1 ul {
-  margin: 90px 0;
+  margin-top: 90px;
 }
 
 .about .about-box .content2 {
@@ -302,8 +304,8 @@ h2 {
   right: 50px;
 }
 
-.about .about-box .content2 ul:first-of-type {
-  margin-bottom: 143px;
+.about .about-box .content2 ul:last-of-type {
+  margin-top: 68px;
 }
 
 .about .about-box .content2 .skills {
@@ -363,38 +365,24 @@ h2 {
 
 .project .name {
   font-size: 20px;
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .project .name li {
   display: inline-block;
-  padding: 0 15px;
+  margin-right: 15px;
 }
 
 .project .name li a {
+  padding: 5px;
+  border-radius: 20px;
   display: block;
-  position: relative;
-  z-index: 3;
 }
 
-.project .name li a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 40%;
-  left: -5%;
-  width: 0;
-  height: 50%;
-  background-color: #ffba00;
+.project .name li.on a, .project .name li a:hover {
+  background-color: #dff1ff;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  z-index: -1;
-}
-
-.project .name li.on a:after, .project .name li a:hover:after {
-  width: 110%;
 }
 
 .project .view {
@@ -403,7 +391,6 @@ h2 {
 
 .project .view li {
   width: 100%;
-  height: 580px;
   position: absolute;
   top: 0;
   border-radius: 20px;
@@ -416,9 +403,6 @@ h2 {
 
 .project .view li .project-content {
   width: 430px;
-  position: absolute;
-  top: 60px;
-  left: 60px;
 }
 
 .project .view li p {
@@ -485,8 +469,8 @@ h2 {
 
 .project .view li .moniter {
   position: absolute;
-  top: 60px;
-  right: 60px;
+  top: 0;
+  right: 0;
 }
 
 .project .view li .moniter a {
@@ -499,6 +483,10 @@ h2 {
   overflow: hidden;
   -webkit-box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.3);
           box-shadow: 20px 20px 20px 0 rgba(0, 0, 0, 0.3);
+}
+
+.contact h2 {
+  text-align: left;
 }
 
 .contact .contact-wrap {

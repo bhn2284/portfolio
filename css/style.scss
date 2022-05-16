@@ -46,13 +46,13 @@ $desktop:1400px;
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
 #footer{position:relative; height:7vh; background:$yellow;}
-.container{width:1320px; margin:0 auto; position:relative; height:inherit;}
+.container{max-width:1440px; padding:0 60px; margin:0 auto; position:relative; height:inherit;}
 h1,h2,.logo,.home p{font-family:$yeoljeong;}
 h2{
     font-size:36px; 
     color:$blue;
     text-align: center;
-    padding:60px 0 40px 0;
+    padding:100px 0 60px 0;
 }
 .logo{
     position:fixed;
@@ -170,11 +170,12 @@ h2{
         position:relative;
         box-shadow: 3px 3px $light-blue; 
         border-radius:30px; 
-        padding:80px 60px;
-        height:730px;
+        padding:90px 50px;
+        height:600px;
         background:$white;
         .profile{
             width:300px;
+            height:420px;
             float:left;
         }
         .content1 p,.content1 li,.content2 li{font-size:17px; line-height:25px;}
@@ -189,13 +190,13 @@ h2{
                 color:$yellow;
             }
             .name{font-weight:800; font-size:20px;}
-            ul{margin:90px 0;}
+            ul{margin-top:90px}
             
         }
         .content2{
             position:absolute;
             right:50px;
-            ul:first-of-type{margin-bottom:143px;}
+            ul:last-of-type{margin-top:68px;}
             .skills{
                 width:500px;
                 padding:5px 0;
@@ -225,29 +226,29 @@ h2{
         // justify-content:space-evenly;
         // flex-direction: row;
         font-size:20px;
-        text-align:center;
+        // text-align:center;
         // align-items: center;
-        font-weight:bold;
-        margin-bottom:60px;
-        li{display: inline-block; padding:0 15px;
+        margin-bottom:40px;
+        li{display: inline-block; margin-right:15px;
             a{
-                display: block; position:relative; z-index:3;
-                &:after{content:''; display: block; position:absolute; top:40%; left:-5%; width:0; height:50%; background-color:$yellow; transition: all .3s ease-in-out; z-index:-1;}
+                padding:5px; 
+                border-radius:20px;
+                display:block;
             }
-            &.on a:after, a:hover:after{width:110%;}
+            &.on a, a:hover{background-color:$white-blue; transition:all .3s ease-in-out;}
         }
     }
     .view{
         position:relative;
         li{
             width:100%;
-            height:580px;
+            // height:580px;
             position:absolute;
             top:0;
             border-radius:20px;
             display:none;
             &.on{display: block;}
-            .project-content{width:430px; position:absolute; top:60px; left:60px;}
+            .project-content{width:430px;}
             p{
                 font-size:17px;
                 &.list-p{margin-top:20px; line-height:30px;}
@@ -275,13 +276,14 @@ h2{
                 &:hover{background:$blue; color:$white;}
             }
             .moniter{
-                position:absolute; top:60px; right: 60px;
+                position:absolute; top:0; right:0;
                 a{display: block; position:relative; width:32vw; height:20vh;min-width:450px; min-height:430px; overflow: hidden; box-shadow:20px 20px 20px 0 rgba(0,0,0,0.3);}
             }
         }
     }
 }
 .contact{
+    h2{text-align: left;}
     .contact-wrap{width:90%; margin:0 auto; display: block;
         .contact-text{
             p{font-size:20px; line-height:200%; margin-top:30px;}
