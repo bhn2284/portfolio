@@ -3,15 +3,14 @@
 @font-face {
     font-family: 'RixYeoljeongdo_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-weight:normal;
+    font-style:normal;
 }
 
 //Break Point
 $yeoljeong:'RixYeoljeongdo_Regular';
 $blue:#1767ae;
-$light-blue:#609ae6;
-$white-blue:#dff1ff;
+$light-blue:#dff1ff;
 $white:#fff;
 $yellow:#ffba00;
 $gray:#f8f8f8;
@@ -41,13 +40,13 @@ $desktop:1400px;
   }
 #wrap{width:100%; margin:0 auto; overflow:hidden; background:$white;}
 #main{width:100%;}
-#home{position:relative; height:100vh; width:100%; min-height:969px;}
-#about{position:relative; height:100vh; min-height:969px; background-color:$white-blue;}
+#home{position:relative; height:100vh; width:100%; min-height:969px; background:#fffff0}
+#about{position:relative; height:100vh; min-height:969px; background-color:$light-blue;}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden;}
 #footer{position:relative; height:7vh; background:$yellow;}
 .container{max-width:1440px; padding:0 60px; margin:0 auto; position:relative; height:inherit;}
-h1,h2,.logo,.home p{font-family:$yeoljeong;}
+h1,h2,h3,.logo,.home p{font-family:$yeoljeong;}
 h2{
     font-size:36px; 
     color:$blue;
@@ -103,12 +102,12 @@ h2{
         top:20%;
         left:50%;
         transform:translateX(-50%);
-        height:450px;
-        width:450px;
+        height:330px;
+        width:330px;
         border-radius:50%;
-        background: $white-blue;
+        background:$light-blue;
         box-shadow:0;
-        transition:all 2s ease-in-out;
+        transition:all 1s ease-in-out;
     }
     h1{
         font-size:100px;
@@ -116,24 +115,24 @@ h2{
         -webkit-text-stroke:1px $blue;
         position:absolute;
         width:100%;
-        top:50%;
-        transform:translateY(-50%);
-        left:200px;
+        top:30%;
+        left:10px;
+        // transform:translateY(-50%);
         text-align:left;
         z-index:1;
         animation:mainTxt 2s forwards;
     }
-
     @keyframes mainTxt {
         to{text-shadow: $blue -0px 0px, $blue -1px 1px, $blue -2px 2px, $blue -3px 3px, $blue -4px 4px, $blue -5px 5px, $blue -6px 6px, $blue -7px 7px, $blue -8px 8px, $blue -9px 9px, $blue -10px 10px, $blue -11px 11px, $blue -12px 12px, $blue -13px 13px, $blue -14px 14px, $blue -15px 15px;}
         from{text-shadow:$blue -0px 0px;}
     }
+    h3{font-size:16px; position:absolute; bottom:280px; left:10px; text-transform: uppercase; color:$yellow;}
     p{
         font-size:60px;
         color:$blue;
         text-align:right;
         position:absolute;
-        right:-50px;
+        right:-70px;
         word-wrap:break-word;
         text-transform: uppercase;
         bottom:15%;
@@ -184,7 +183,7 @@ h2{
 .about{
     .about-box{
         position:relative;
-        box-shadow: 3px 3px $light-blue; 
+        box-shadow: 3px 3px $blue; 
         border-radius:30px; 
         padding:90px 50px;
         height:600px;
@@ -237,6 +236,7 @@ h2{
 
 .project{
     h2{color:$yellow;}
+    h3{font-family:'NanumSquare';}
     .name{
         // display: flex;
         // justify-content:space-evenly;
@@ -247,11 +247,12 @@ h2{
         margin-bottom:40px;
         li{display: inline-block; margin-right:15px;
             a{
-                padding:5px; 
+                padding:6px; 
                 border-radius:20px;
+                border:2px solid $light-blue;
                 display:block;
             }
-            &.on a, a:hover{background-color:$white-blue; transition:all .3s ease-in-out;}
+            &.on a, a:hover{background-color:$light-blue; transition:all .3s ease-in-out;}
         }
     }
     .view{
@@ -309,6 +310,7 @@ h2{
             .contact-title{
                 font-size:18px; 
                 text-align:right;
+                font-family:'NanumSquare';
                 margin:120px 130px 0 0;
             }
             a{

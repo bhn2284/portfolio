@@ -21,6 +21,7 @@
   height: 100vh;
   width: 100%;
   min-height: 969px;
+  background: #fffff0;
 }
 
 #about {
@@ -57,7 +58,7 @@
   height: inherit;
 }
 
-h1, h2, .logo, .home p {
+h1, h2, h3, .logo, .home p {
   font-family: "RixYeoljeongdo_Regular";
 }
 
@@ -149,14 +150,14 @@ h2 {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  height: 450px;
-  width: 450px;
+  height: 330px;
+  width: 330px;
   border-radius: 50%;
   background: #dff1ff;
   -webkit-box-shadow: 0;
           box-shadow: 0;
-  -webkit-transition: all 2s ease-in-out;
-  transition: all 2s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .home h1 {
@@ -165,10 +166,8 @@ h2 {
   -webkit-text-stroke: 1px #1767ae;
   position: absolute;
   width: 100%;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 200px;
+  top: 30%;
+  left: 10px;
   text-align: left;
   z-index: 1;
   -webkit-animation: mainTxt 2s forwards;
@@ -193,12 +192,21 @@ h2 {
   }
 }
 
+.home h3 {
+  font-size: 16px;
+  position: absolute;
+  bottom: 280px;
+  left: 10px;
+  text-transform: uppercase;
+  color: #ffba00;
+}
+
 .home p {
   font-size: 60px;
   color: #1767ae;
   text-align: right;
   position: absolute;
-  right: -50px;
+  right: -70px;
   word-wrap: break-word;
   text-transform: uppercase;
   bottom: 15%;
@@ -277,8 +285,8 @@ h2 {
 
 .about .about-box {
   position: relative;
-  -webkit-box-shadow: 3px 3px #609ae6;
-          box-shadow: 3px 3px #609ae6;
+  -webkit-box-shadow: 3px 3px #1767ae;
+          box-shadow: 3px 3px #1767ae;
   border-radius: 30px;
   padding: 90px 50px;
   height: 600px;
@@ -382,6 +390,10 @@ h2 {
   color: #ffba00;
 }
 
+.project h3 {
+  font-family: 'NanumSquare';
+}
+
 .project .name {
   font-size: 20px;
   margin-bottom: 40px;
@@ -393,8 +405,9 @@ h2 {
 }
 
 .project .name li a {
-  padding: 5px;
+  padding: 6px;
   border-radius: 20px;
+  border: 2px solid #dff1ff;
   display: block;
 }
 
@@ -521,6 +534,7 @@ h2 {
 .contact .contact-wrap .contact-info .contact-title {
   font-size: 18px;
   text-align: right;
+  font-family: 'NanumSquare';
   margin: 120px 130px 0 0;
 }
 
