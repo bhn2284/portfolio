@@ -1,3 +1,16 @@
+//circle boxshadow
+$(function(){
+    const box = new Array();
+
+    for(var i=0; i<700; i++){
+        box[i] = '#dff1ff' +' '+ -i + 'px ' + i + 'px';
+    }
+
+    var s = box.join(',');
+    var domObj = document.querySelector('.circle');
+    domObj.style.boxShadow=s;
+});
+
 //메뉴 클릭하면 콘텐츠로 이동
 var menu=$('.gnb-menu>.gnb>li');
 var content=$('#main section');

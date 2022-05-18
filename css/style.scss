@@ -98,26 +98,42 @@ h2{
     }
 }
 .home{
-    .bg1{width:800px; position:absolute; left:-95px; top:50%; transform:translate(0,-50%); border-radius:50%;}
-    .bg2{width:500px; position:absolute; right:-50px; top:100px; border-radius:50%;}
+    .circle{
+        position:relative;
+        top:20%;
+        left:50%;
+        transform:translateX(-50%);
+        height:450px;
+        width:450px;
+        border-radius:50%;
+        background: $white-blue;
+        box-shadow:0;
+        transition:all 2s ease-in-out;
+    }
     h1{
-        font-size:110px;
+        font-size:100px;
         color:$white;
         -webkit-text-stroke:1px $blue;
-        text-shadow:3px 3px $blue;
         position:absolute;
         width:100%;
-        top:20%;
-        left:-100PX;
-        text-align: left;
+        top:50%;
+        transform:translateY(-50%);
+        left:200px;
+        text-align:left;
         z-index:1;
+        animation:mainTxt 2s forwards;
+    }
+
+    @keyframes mainTxt {
+        to{text-shadow: $blue -0px 0px, $blue -1px 1px, $blue -2px 2px, $blue -3px 3px, $blue -4px 4px, $blue -5px 5px, $blue -6px 6px, $blue -7px 7px, $blue -8px 8px, $blue -9px 9px, $blue -10px 10px, $blue -11px 11px, $blue -12px 12px, $blue -13px 13px, $blue -14px 14px, $blue -15px 15px;}
+        from{text-shadow:$blue -0px 0px;}
     }
     p{
-        font-size:70px;
+        font-size:60px;
         color:$blue;
         text-align:right;
         position:absolute;
-        right:-100px;
+        right:-50px;
         word-wrap:break-word;
         text-transform: uppercase;
         bottom:15%;
@@ -284,7 +300,7 @@ h2{
 }
 .contact{
     h2{text-align: left;}
-    .contact-wrap{width:90%; margin:0 auto; display: block;
+    .contact-wrap{
         .contact-text{
             p{font-size:20px; line-height:200%; margin-top:30px;}
         }

@@ -143,43 +143,62 @@ h2 {
   font-weight: 800;
 }
 
-.home .bg1 {
-  width: 800px;
-  position: absolute;
-  left: -95px;
-  top: 50%;
-  -webkit-transform: translate(0, -50%);
-          transform: translate(0, -50%);
+.home .circle {
+  position: relative;
+  top: 20%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  height: 450px;
+  width: 450px;
   border-radius: 50%;
-}
-
-.home .bg2 {
-  width: 500px;
-  position: absolute;
-  right: -50px;
-  top: 100px;
-  border-radius: 50%;
+  background: #dff1ff;
+  -webkit-box-shadow: 0;
+          box-shadow: 0;
+  -webkit-transition: all 2s ease-in-out;
+  transition: all 2s ease-in-out;
 }
 
 .home h1 {
-  font-size: 110px;
+  font-size: 100px;
   color: #fff;
   -webkit-text-stroke: 1px #1767ae;
-  text-shadow: 3px 3px #1767ae;
   position: absolute;
   width: 100%;
-  top: 20%;
-  left: -100PX;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  left: 200px;
   text-align: left;
   z-index: 1;
+  -webkit-animation: mainTxt 2s forwards;
+          animation: mainTxt 2s forwards;
+}
+
+@-webkit-keyframes mainTxt {
+  to {
+    text-shadow: #1767ae 0px 0px, #1767ae -1px 1px, #1767ae -2px 2px, #1767ae -3px 3px, #1767ae -4px 4px, #1767ae -5px 5px, #1767ae -6px 6px, #1767ae -7px 7px, #1767ae -8px 8px, #1767ae -9px 9px, #1767ae -10px 10px, #1767ae -11px 11px, #1767ae -12px 12px, #1767ae -13px 13px, #1767ae -14px 14px, #1767ae -15px 15px;
+  }
+  from {
+    text-shadow: #1767ae 0px 0px;
+  }
+}
+
+@keyframes mainTxt {
+  to {
+    text-shadow: #1767ae 0px 0px, #1767ae -1px 1px, #1767ae -2px 2px, #1767ae -3px 3px, #1767ae -4px 4px, #1767ae -5px 5px, #1767ae -6px 6px, #1767ae -7px 7px, #1767ae -8px 8px, #1767ae -9px 9px, #1767ae -10px 10px, #1767ae -11px 11px, #1767ae -12px 12px, #1767ae -13px 13px, #1767ae -14px 14px, #1767ae -15px 15px;
+  }
+  from {
+    text-shadow: #1767ae 0px 0px;
+  }
 }
 
 .home p {
-  font-size: 70px;
+  font-size: 60px;
   color: #1767ae;
   text-align: right;
   position: absolute;
-  right: -100px;
+  right: -50px;
   word-wrap: break-word;
   text-transform: uppercase;
   bottom: 15%;
@@ -487,12 +506,6 @@ h2 {
 
 .contact h2 {
   text-align: left;
-}
-
-.contact .contact-wrap {
-  width: 90%;
-  margin: 0 auto;
-  display: block;
 }
 
 .contact .contact-wrap .contact-text p {
