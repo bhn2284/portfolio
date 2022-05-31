@@ -14,7 +14,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-  background-color: #fff1c5;
+  background-color: #fff0c1;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -429,19 +429,23 @@ h2 {
 }
 
 .project .name li a {
-  padding: 6px;
+  padding: 7px;
   border-radius: 20px;
   border: 1px solid #dff1ff;
-  -webkit-box-shadow: 3px 3px #dff1ff;
-          box-shadow: 3px 3px #dff1ff;
+  -webkit-box-shadow: 0 4px #dff1ff;
+          box-shadow: 0 4px #dff1ff;
   display: block;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 .project .name li.on a, .project .name li a:hover {
   background-color: #dff1ff;
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
   border-color: #fff;
+  -webkit-box-shadow: 0 3px #dff1ff;
+          box-shadow: 0 3px #dff1ff;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .project .view {
@@ -504,29 +508,34 @@ h2 {
   width: 100px;
 }
 
-.project .view li .view-btn {
+.project .view li .view-btn, .project .view li .process-btn {
   font-weight: 800;
-  display: block;
+  display: inline-block;
+  margin-right: 10px;
   text-transform: uppercase;
   color: #1767ae;
   border: 1px solid #1767ae;
-  -webkit-box-shadow: 3px 3px #1767ae;
-          box-shadow: 3px 3px #1767ae;
+  -webkit-box-shadow: 0 4px #1767ae;
+          box-shadow: 0 4px #1767ae;
   border-radius: 30px;
   height: 45px;
   font-size: 18px;
   width: 140px;
   text-align: center;
-  line-height: 45px;
+  line-height: 47px;
   margin-top: 30px;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: ease-in-out .3s;
+  transition: ease-in-out .3s;
 }
 
-.project .view li .view-btn:hover {
+.project .view li .view-btn:hover, .project .view li .process-btn:hover {
   background: #1767ae;
   color: #fff;
   border-color: #fff;
+  -webkit-box-shadow: 0 3px #1767ae;
+          box-shadow: 0 3px #1767ae;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .project .view li .moniter {

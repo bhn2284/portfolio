@@ -2,16 +2,16 @@
 
 /* 여백 초기화 */
 body,div,ul,li,dl,dt,ol,h1,h2,h3,h4,h5,h6,input,fieldset,legend,p,select,table,
-th,td,tr,textarea,button,form{margin: 0; padding: 0; line-height: 1.6; vertical-align:baseline; box-sizing:border-box;}
+th,td,tr,textarea,button,form{margin: 0; padding: 0; line-height: 1; vertical-align:baseline; box-sizing:border-box;}
 
 /* a 링크 초기화 */
-a {color: #222; text-decoration: none;}
-a:hover{text-decoration:underline;}
+a {color: #555; text-decoration: none;}
+a:hover{text-decoration:none;}
 /* 폰트 초기화 */
 body, input, textarea, button, table, strong, span, a{
-    font-family: 'NotoSans', sans-serif;
-    color: #222; font-size: 13px;
-	font: inherit; letter-spacing: -0.5pt; font-style:normal;}
+    font-family: 'Noto Sans KR', sans-serif;
+    color: #555; font-size: 13px;
+	font: inherit; letter-spacing:0; font-style:normal;}
 
 /* 폰트 스타일 초기화 */
 em,address {font-style: normal;}
@@ -20,7 +20,7 @@ em,address {font-style: normal;}
 dl,ul,li,ol,menu {list-style: none;}
 
 /* 제목 태그 초기화 */
-h1,h2,h3,h4,h5,h6 {font-size: 13px; color:#222; font-weight: normal;}
+h1,h2,h3,h4,h5,h6 {font-size: 13px; color:#555; font-weight: normal;}
 
 /* 테두리 초기화 */
 img,fieldset {border:0 none;}
@@ -43,16 +43,3 @@ button {border:0; vertical-align:middle; cursor:pointer; background:none;}
 .mt40 {margin-top: 40px !important;}
 .mt45 {margin-top: 45px !important;}
 .mt50 {margin-top: 50px !important;}
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,179 +1,101 @@
-/* pc 메뉴 */
-$('.depth01').on({"mouseover focusin":function(){
-	$(this).addClass('active');
-	}, "mouseout focusout":function(){
-	$(this).removeClass('active');
-	}
-});
-
-/* 모바일 메뉴 */
-$('.menu_btn').click(function(){
-	$('.bar').toggleClass('add');
-	$('.mobile_nav').toggle("slide");
-	$('.sub').slideUp();
-});
-
-/* 모바일 메뉴 슬라이드 */
-$('.sub').hide();
-$('.title').click(function(){
-	$(this).siblings('.switch').toggleClass('on');
-	$(this).next().slideToggle();
-});
-
-/* 모바일 메뉴 switch */
-$('.switch').click(function(){
-	$(this).toggleClass('on');
-	$(this).siblings('.sub').slideToggle();
-});
-
-
 /* 헤더 줄어듬 */
 var shrinkHeader = 300;
   $(window).scroll(function() {
     var scroll = getCurrentScroll();
       if ( scroll >= shrinkHeader ) {
-           $('.pc').addClass('shrink');
+           $('nav').addClass('fixed');
         }
         else {
-            $('.pc').removeClass('shrink');
+            $('nav').removeClass('fixed');
         }
   });
 function getCurrentScroll() {
     return window.pageYOffset || document.documentElement.scrollTop;
 }
-
-
-/* 배너 */
-let banner=$('.slides>li'),
-	pagerBtn=$('.pager>li'),
-	prevBtn=$('.controlBtn .prev'),
-	nextBtn=$('.controlBtn .next'),
-	current=0,
-	timer=undefined;
-
-function imgslide(){
-	timer=setInterval(function(){
-		const prev=banner.eq(current);
-		const prevpage=pagerBtn.eq(current);
-		move(prev,0,'-100%');
-		prevpage.removeClass('on');
-		current++;
-		if(current==banner.size()){
-			current=0;
-		}
-		const next=banner.eq(current);
-		const nextpage=pagerBtn.eq(current);
-		move(next,'100%',0);
-		nextpage.addClass('on');
-	},3000);
-}
-function move(tg,start,end){
-	tg.css('left',start).stop().animate({left:end},500)
-}
-imgslide();
-
-/* pagerBtn */
-pagerBtn.click(function(){
-	let tg=$(this);
-	let i=tg.index();
-	pagerBtn.removeClass('on');
-	tg.addClass('on');
-	if(current>i){
-		move2(i)
-	}else{
-		move1(i)
-	}
-});
-function move1(i){
-	if(current==i) return;
-	let currentEl=banner.eq(current);
-	const nextEl=banner.eq(i);
-	currentEl.css('left','0').stop().animate({left:'-100%'},500);
-	nextEl.css('left','100%').stop().animate({left:0},500);
-	current=i;
-}
-function move2(i){
-	if(current==i) return;
-	let currentEl=banner.eq(current);
-	const nextEl=banner.eq(i);
-	currentEl.css('left','0').stop().animate({left:'100%'},500);
-	nextEl.css('left','-100%').stop().animate({left:0},500);
-	current=i;
-}
-
-/* 마우스 올리면 멈춤 */
-$('.visualWrap').on({"mouseover focus":function(){
-	clearInterval(timer);
-	}, "mouseout blur":function(){
-		imgslide();
-	}
-});
-
-/* 배너 prev,next 버튼 */
-prevBtn.click(function(){
-	const prev=banner.eq(current);
-	const prevpage=pagerBtn.eq(current);
-	move(prev,0,'100%');
-	prevpage.removeClass('on');
-	current--;
-	if(current==-banner.size()){
-		current=0;
-	}
-	const next=banner.eq(current);
-	const nextpage=pagerBtn.eq(current);
-	move(next,'-100%',0);
-	nextpage.addClass('on');
-});
-
-nextBtn.click(function(){
-	const prev=banner.eq(current);
-	const prevpage=pagerBtn.eq(current);
-	move(prev,0,'-100%');
-	prevpage.removeClass('on');
-	current++;
-	if(current==banner.size()){
-		current=0;
-	}
-	const next=banner.eq(current);
-	const nextpage=pagerBtn.eq(current);
-	move(next,'100%',0);
-	nextpage.addClass('on');
-});
-
-
-/* 이미지 슬라이드쇼 */
-let interval=4000;
-$('.slideshow').each(function(){
-    let timer='undefined';
-    let container=$(this);
-    function switchImg(){
-        const anchors=container.find('a');
-        const first=anchors.eq(0);
-        const second=anchors.eq(1);
-        first.fadeOut().appendTo(container);
-        second.fadeIn();
+// gnb메뉴
+$('.gnb ul li').mouseover(function(){
+    if($(this).prop('class')!='on'){
+        $('.gnb ul li').removeClass('on');
+        $(this).addClass('on');
+        $('.gnb-sub').css('display','none');
+        $('.gnb-sub').eq($(this).index()).slideDown('fast');
     }
-    startTimer();
-    function startTimer(){
-        timer=setInterval(switchImg,interval)
+});
+
+// 메인배너
+$('.main-visual ul li').on({"mouseover":function(){
+        $(this).addClass('on');
+    }, "mouseout":function(){
+        $(this).removeClass('on');
+    }  
+});
+
+var swiper1 = new Swiper(".mySwiper", {
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    loop:true,
+    autoplay:{
+        delay:3000,
+        disableOnInteraction : false
     }
-    function stopTimer(){
-        clearInterval(timer);
+});
+$('.mySwiper').on({"mouseover":function(){
+        swiper1.autoplay.stop();
+    },"mouseout":function(){
+        swiper1.autoplay.start();
     }
-    container.hover(stopTimer,startTimer);
+});
+
+// family site
+let moving=$('.site-list>ul'),
+    timer=undefined;
+function slide(){
+    timer=setInterval(()=>{
+        moving.animate({left:-200},500,function(){
+            $(this).children('li:first').insertAfter($(this).children('li:last'));
+            $(this).css('left','0');
+        });
+    },3000);
+}
+slide();
+
+$('.site-list').on({"mouseover":function(){
+    clearInterval(timer);
+    },"mouseout":function(){
+        slide();
+    }
+});
+
+function left(){
+    moving.find('li:last').insertBefore(moving.find('li:first'));
+    moving.css('left','-200').stop().animate({left:0},500);
+}
+function right(){
+    moving.animate({left:-200},500, function(){
+        $(this).children('li:first').insertAfter($(this).children('li:last'));
+        $(this).css({left:0});
+    });
+}
+$('.family-site .left').click(function(){
+    left();
+    return false;
+});
+$('.family-site .right').click(function(){
+    right();
+    return false;
 });
 
 
-/* top버튼 */
-$(window).scroll(function(){ 
-	if($(this).scrollTop() > 250){
-		$('#topBtn').fadeIn(); 
-	}else{ 
-		$('#topBtn').fadeOut();
-	} 
-});
-
-$("#topBtn").click(function(){
-	$('html, body').animate({scrollTop:0}, 400);
-	return false; 
-});			
+//footer banner
+var swiper2 = new Swiper(".foot-banner", {
+    navigation: {
+      nextEl: ".control-btn .next-btn",
+      prevEl: ".control-btn .prev-btn",
+    },
+    loop:true,
+    autoplay:{
+        delay:3000
+    }
+  });
