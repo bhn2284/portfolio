@@ -61,7 +61,7 @@ $('.name li').click(function(e){
 });
 
 //모니터안에서 웹사이트 애니메이션
-$('.moniter a').hover(function(){ 
+$('.screen').hover(function(){ 
     var ah=$(this).innerHeight(); //innerHeight: 패딩 포함된 높이값
     var img=$(this).find('img');
     var imgh=img.innerHeight();

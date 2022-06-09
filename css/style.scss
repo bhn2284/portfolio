@@ -271,7 +271,7 @@ h2{
             border-radius:20px;
             display:none;
             &.on{display: block;}
-            .project-content{width:430px;}
+            .project-content{width:430px; position:relative; left:0;}
             p{
                 font-size:17px;
                 &.list-p{margin-top:20px; line-height:30px;}
@@ -302,19 +302,31 @@ h2{
             .moniter{
                 position:absolute; top:-40px; right:0; width:600px; height:530px; background:url(../img/moniter.png) no-repeat; background-size: 100%;
                 a{
-                    display:block; position:relative; top:25px; left:27px; width:547px; height:327px; overflow: hidden;
+                    display:block; position:relative; top:25px; left:27px; width:547px; height:328px; overflow: hidden;
                     img{position:relative; top:0; left:0;}
                 }
                 p{position:absolute; left:20px; bottom:70px; font-family: 'Noto Sans'; font-size:13px;}
             }
             .phone{
-                position:absolute; top:-80px; right:0px; width:
-                300px; height:550px; background:url(../img/phone1.png) no-repeat; background-size: 100%;
-                a{
-                    display:block; position:relative; top:25px; left:27px; width:200px; height:327px; overflow: hidden;
-                    img{position:relative; top:0; left:0;}
+                position:absolute; top:0; right:0; width:600px;
+                .phone1,.phone2{
+                    position:absolute; 
+                    top:-80px; 
+                    width:270px; height:536px;
+                    a{display:block;}
                 }
-                p{position:absolute; left:20px; bottom:90px; font-family: 'Noto Sans'; font-size:13px;}
+                .phone2{
+                    right:0; background:url(../img/phone1.png) no-repeat; background-size: 100%;
+                    a{
+                        position:relative; 
+                        top:33px; left:19px; 
+                        width:232px; height:455px; 
+                        overflow: hidden;
+                        img{position:relative; top:0; left:0;}
+                    }
+                    p{position:absolute; left:65px; bottom:-25px; font-family: 'Noto Sans'; font-size:13px;}
+                }
+                
             }
         }
     }
