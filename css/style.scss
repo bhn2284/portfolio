@@ -52,7 +52,7 @@ body::-webkit-scrollbar-thumb:hover{background-color:$yellow}
 #home{position:relative; height:100vh; width:100%; min-height:969px; background:$light-yellow}
 #about{position:relative; height:100vh; min-height:969px; background-color:$light-blue;}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
-#contact{position:relative; height:93vh; overflow: hidden;}
+#contact{position:relative; height:93vh; overflow: hidden; background-color:$light-yellow;}
 #footer{position:relative; height:7vh; background:$yellow;}
 .container{max-width:1440px; padding:0 60px; margin:0 auto; position:relative; height:inherit;}
 h1,h2,h3,.logo,.home p{font-family:$yeoljeong;}
@@ -332,15 +332,15 @@ h2{
     }
 }
 .contact{
-    h2{text-align: left;}
+    h2{text-align: left; padding:180px 0 30px 0;}
     .contact-wrap{
         .contact-text{
-            p{font-size:20px; line-height:200%; margin-top:30px;}
+            p{font-size:22px; line-height:180%;}
         }
         .contact-info{
             position:relative;
             .contact-title{
-                font-size:18px; 
+                font-size:20px;
                 text-align:right;
                 font-family:'NanumSquare';
                 margin:120px 130px 0 0;
@@ -349,21 +349,23 @@ h2{
                 float: right;
                 color:$yellow;
                 font-size:16px;
+                font-family:$yeoljeong;
+                font-weight:100;
                 &.contact-email{
                     padding-top:20px;
-                    font-size:40px; 
-                    font-weight:600;
+                    font-size:35px; 
+                    font-weight:100;
                     color:$blue;
                     transition:all .3s;
                     &:hover,&:focus{
                         color:$yellow;
-                        transform:scale(.98);
+                        transform:scale(.95);
                     }
                 }
             }
             ul{
                 position:absolute;
-                right:20px;
+                right:0;
                 top:100px;
                 li{
                     float:left;

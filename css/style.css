@@ -65,6 +65,7 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
   height: 93vh;
   overflow: hidden;
+  background-color: #fffff0;
 }
 
 #footer {
@@ -623,12 +624,12 @@ h2 {
 
 .contact h2 {
   text-align: left;
+  padding: 180px 0 30px 0;
 }
 
 .contact .contact-wrap .contact-text p {
-  font-size: 20px;
-  line-height: 200%;
-  margin-top: 30px;
+  font-size: 22px;
+  line-height: 180%;
 }
 
 .contact .contact-wrap .contact-info {
@@ -636,7 +637,7 @@ h2 {
 }
 
 .contact .contact-wrap .contact-info .contact-title {
-  font-size: 18px;
+  font-size: 20px;
   text-align: right;
   font-family: 'NanumSquare';
   margin: 120px 130px 0 0;
@@ -646,12 +647,14 @@ h2 {
   float: right;
   color: #ffba00;
   font-size: 16px;
+  font-family: "RixYeoljeongdo_Regular";
+  font-weight: 100;
 }
 
 .contact .contact-wrap .contact-info a.contact-email {
   padding-top: 20px;
-  font-size: 40px;
-  font-weight: 600;
+  font-size: 35px;
+  font-weight: 100;
   color: #1767ae;
   -webkit-transition: all .3s;
   transition: all .3s;
@@ -659,13 +662,13 @@ h2 {
 
 .contact .contact-wrap .contact-info a.contact-email:hover, .contact .contact-wrap .contact-info a.contact-email:focus {
   color: #ffba00;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .contact .contact-wrap .contact-info ul {
   position: absolute;
-  right: 20px;
+  right: 0;
   top: 100px;
 }
 
