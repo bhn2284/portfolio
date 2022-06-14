@@ -82,7 +82,7 @@ body::-webkit-scrollbar-thumb:hover {
   height: inherit;
 }
 
-h1, h2, h3, .logo, .home p {
+h1, h2, h3, .logo, .home p, .tit, .contact-info a {
   font-family: "RixYeoljeongdo_Regular";
 }
 
@@ -323,9 +323,23 @@ h2 {
   float: left;
 }
 
-.about .about-box .content1 p, .about .about-box .content1 li, .about .about-box .content2 li {
+.about .about-box li, .about .about-box .content1 p {
   font-size: 17px;
   line-height: 25px;
+}
+
+.about .about-box li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.about .about-box li span {
+  width: 100px;
 }
 
 .about .about-box .content1 {
@@ -336,7 +350,6 @@ h2 {
 .about .about-box .content1 h3 {
   font-size: 24px;
   margin-bottom: 15px;
-  font-family: "RixYeoljeongdo_Regular";
   font-weight: 500;
   color: #ffba00;
 }
@@ -356,11 +369,11 @@ h2 {
 }
 
 .about .about-box .content2 ul:last-of-type {
-  margin-top: 68px;
+  margin-top: 63px;
 }
 
 .about .about-box .content2 .skills {
-  width: 500px;
+  width: 535px;
   padding: 5px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -372,9 +385,6 @@ h2 {
 
 .about .about-box .content2 .skills li {
   float: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -392,8 +402,8 @@ h2 {
 .about .about-box .content2 .skills li span {
   padding-top: 5px;
   font-size: 13px;
+  width: 87px;
   font-family: 'Noto Sans';
-  font-weight: 100;
 }
 
 .about .about-box .content2 .skills li img {
@@ -406,8 +416,6 @@ h2 {
   font-weight: 800;
   text-transform: uppercase;
   margin-bottom: 15px;
-  line-height: 25px;
-  font-family: "RixYeoljeongdo_Regular";
 }
 
 .project h2 {
@@ -466,7 +474,7 @@ h2 {
 }
 
 .project .view li .project-content {
-  width: 430px;
+  width: 500px;
   position: relative;
   left: 0;
 }
@@ -478,6 +486,7 @@ h2 {
 .project .view li p.list-p {
   margin-top: 20px;
   line-height: 30px;
+  word-break: keep-all;
 }
 
 .project .view li p.category {
@@ -633,26 +642,27 @@ h2 {
 }
 
 .contact .contact-wrap .contact-info {
-  position: relative;
+  position: absolute;
+  bottom: 120px;
+  right: 0;
+  height: 130px;
 }
 
 .contact .contact-wrap .contact-info .contact-title {
   font-size: 20px;
-  text-align: right;
   font-family: 'NanumSquare';
-  margin: 120px 130px 0 0;
 }
 
 .contact .contact-wrap .contact-info a {
+  display: block;
   float: right;
   color: #ffba00;
-  font-size: 16px;
-  font-family: "RixYeoljeongdo_Regular";
+  font-size: 18px;
   font-weight: 100;
 }
 
 .contact .contact-wrap .contact-info a.contact-email {
-  padding-top: 20px;
+  margin-top: 20px;
   font-size: 35px;
   font-weight: 100;
   color: #1767ae;
@@ -668,18 +678,15 @@ h2 {
 
 .contact .contact-wrap .contact-info ul {
   position: absolute;
-  right: 0;
-  top: 100px;
+  bottom: 0;
 }
 
 .contact .contact-wrap .contact-info ul li {
   float: left;
-  padding: 15px;
-  font-weight: 600;
 }
 
-.contact .contact-wrap .contact-info ul li a {
-  font-size: 18px;
+.contact .contact-wrap .contact-info ul li:not(:last-child) {
+  margin-right: 57px;
 }
 
 .fish {
@@ -690,16 +697,7 @@ h2 {
   position: absolute;
   -webkit-animation: fish 24s infinite linear;
           animation: fish 24s infinite linear;
-}
-
-.fish.fish1 {
-  top: 40%;
-}
-
-.fish.fish2 {
-  top: 75%;
-  -webkit-animation-delay: 12s;
-          animation-delay: 12s;
+  bottom: 15%;
 }
 
 @-webkit-keyframes fish {

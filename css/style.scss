@@ -55,7 +55,7 @@ body::-webkit-scrollbar-thumb:hover{background-color:$yellow}
 #contact{position:relative; height:93vh; overflow: hidden; background-color:$light-yellow;}
 #footer{position:relative; height:7vh; background:$yellow;}
 .container{max-width:1440px; padding:0 60px; margin:0 auto; position:relative; height:inherit;}
-h1,h2,h3,.logo,.home p{font-family:$yeoljeong;}
+h1,h2,h3,.logo,.home p,.tit,.contact-info a{font-family:$yeoljeong;}
 h2{
     font-size:36px; 
     color:$blue;
@@ -202,44 +202,45 @@ h2{
             height:420px;
             float:left;
         }
-        .content1 p,.content1 li,.content2 li{font-size:17px; line-height:25px;}
+        li,.content1 p{font-size:17px; line-height:25px;}
+        li{
+            display:flex; flex-direction: row;
+            span{width:100px;}
+        }
         .content1{
             position:absolute;
             left:400px;
             h3{
                 font-size:24px; 
-                margin-bottom:15px; 
-                font-family:$yeoljeong; 
+                margin-bottom:15px;
                 font-weight:500; 
                 color:$yellow;
             }
             .name{font-weight:800; font-size:20px;}
-            ul{margin-top:90px}
-            
+            ul{margin-top:90px;}
         }
         .content2{
             position:absolute;
             right:50px;
-            ul:last-of-type{margin-top:68px;}
+            ul:last-of-type{margin-top:63px;}
             .skills{
-                width:500px;
+                width:535px;
                 padding:5px 0;
                 display:flex;
                 justify-content:space-between;
                 li{
                     float:left;
-                    display: flex;
-                    flex-direction: column;
-                    text-align: center;
+                    flex-direction:column;
+                    text-align:center;
                     width:18%;
                     align-items: center;
                     justify-content:space-between;
-                    span{padding-top:5px; font-size:13px; font-family:'Noto Sans'; font-weight:100;}
+                    span{padding-top:5px; font-size:13px; width:87px; font-family:'Noto Sans'}
                     img{width:55%}
                 }
             }
         }
-        .tit{font-size:20px !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px; line-height:25px; font-family: $yeoljeong;}
+        .tit{font-size:20px !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px;}
     }
 }
 
@@ -271,10 +272,10 @@ h2{
             border-radius:20px;
             display:none;
             &.on{display: block;}
-            .project-content{width:430px; position:relative; left:0;}
+            .project-content{width:500px; position:relative; left:0;}
             p{
                 font-size:17px;
-                &.list-p{margin-top:20px; line-height:30px;}
+                &.list-p{margin-top:20px; line-height:30px; word-break:keep-all;}
                 &.category{font-size:20px; margin-bottom:5px;}
             }
             .list{display:flex; flex-direction:row; line-height:30px}
@@ -324,7 +325,7 @@ h2{
                         overflow: hidden;
                         img{position:relative; top:0; left:0;}
                     }
-                    p{position:absolute; left:65px; bottom:-25px; font-family: 'Noto Sans'; font-size:13px;}
+                    p{position:absolute; left:65px; bottom:-25px; font-family:'Noto Sans'; font-size:13px;}
                 }
                 
             }
@@ -338,21 +339,22 @@ h2{
             p{font-size:22px; line-height:180%;}
         }
         .contact-info{
-            position:relative;
+            position:absolute;
+            bottom:120px;
+            right:0;
+            height:130px;
             .contact-title{
                 font-size:20px;
-                text-align:right;
                 font-family:'NanumSquare';
-                margin:120px 130px 0 0;
             }
             a{
+                display: block;
                 float: right;
                 color:$yellow;
-                font-size:16px;
-                font-family:$yeoljeong;
+                font-size:18px;
                 font-weight:100;
                 &.contact-email{
-                    padding-top:20px;
+                    margin-top:20px;
                     font-size:35px; 
                     font-weight:100;
                     color:$blue;
@@ -363,17 +365,10 @@ h2{
                     }
                 }
             }
-            ul{
-                position:absolute;
-                right:0;
-                top:100px;
+            ul{position:absolute; bottom:0;
                 li{
                     float:left;
-                    padding:15px;
-                    font-weight:600;
-                    a{
-                        font-size:18px;
-                    }
+                    &:not(:last-child){margin-right:57px;}
                 }
             }
         }
@@ -387,8 +382,7 @@ h2{
     margin-left:-235px;
     position:absolute;
     animation: fish 24s infinite linear;
-    &.fish1{top:40%;}
-    &.fish2{top:75%; animation-delay: 12s;}
+    bottom:15%;
 }
 @keyframes fish{
 	0% {margin-left: -235px}

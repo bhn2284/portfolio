@@ -41,7 +41,7 @@ $(window).scroll(function(){
     });
     
     //스크롤하면 로고 변경
-    if(sct2>offtop.top-50){
+    if(sct2>offtop.top-500){
         $('.img-logo').addClass('on');
         $('.logo').addClass('on');
     }else{
@@ -68,32 +68,32 @@ $('.screen').hover(function(){
     img.stop().animate({top:ah-imgh},4500); //ah-imgh= 모니터 높이- 이미지높이
 },function(){
     var img=$(this).find('img');
-    img.stop().animate({top:0},4500);
+    img.stop().animate({top:0},5000);
 });
 
 //마우스휠
-// var wheelDelta= 0; //휠 이벤트 발생 시 반환 값 확인 변수
-// var browser= 0; //파이어폭스 브라우저 판별 변수 BOM (파이어폭스는 마우스 휠 이벤트를 인지하지 못하기 때문에 해당 변수가 필요)
+var wheelDelta= 0; //휠 이벤트 발생 시 반환 값 확인 변수
+var browser= 0; //파이어폭스 브라우저 판별 변수 BOM (파이어폭스는 마우스 휠 이벤트를 인지하지 못하기 때문에 해당 변수가 필요)
     
-// $('section').each(function(index){
-//     $(this).on('mousewheel DOMMouseScroll', function(event){
-//         event.preventDefault();
-//         browser=window.navigator.userAgent.toLowerCase().indexOf('firefox');
-//         if(browser>=0){
-//             wheelDelta=-event.detail*40
-//         }else{
-//             wheelDelta=event.originalEvent.wheelDelta;
-//         }
-//         console.log(wheelDelta); //-120, 120 등
+$('section').each(function(index){
+    $(this).on('mousewheel DOMMouseScroll', function(event){
+        event.preventDefault();
+        browser=window.navigator.userAgent.toLowerCase().indexOf('firefox');
+        if(browser>=0){
+            wheelDelta=-event.detail*40
+        }else{
+            wheelDelta=event.originalEvent.wheelDelta;
+        }
+        console.log(wheelDelta); //-120, 120 등
 
-//         if(wheelDelta<0){
-//             if(index<$('section').length-1){             
-//                 $('html, body').stop().animate({scrollTop: $(this).next().offset().top},800);
-//             }                                                             
-//         }else{
-//             if(index >0) {
-//                 $('html, body').stop().animate({scrollTop: $(this).prev().offset().top},800);  
-//             } 
-//         }
-//     });
-// });
+        if(wheelDelta<0){
+            if(index<$('section').length-1){             
+                $('html, body').stop().animate({scrollTop: $(this).next().offset().top},800);
+            }                                                             
+        }else{
+            if(index >0) {
+                $('html, body').stop().animate({scrollTop: $(this).prev().offset().top},800);  
+            } 
+        }
+    });
+});
