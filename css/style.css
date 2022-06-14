@@ -697,7 +697,7 @@ h2 {
   position: absolute;
   -webkit-animation: fish 24s infinite linear;
           animation: fish 24s infinite linear;
-  bottom: 15%;
+  bottom: 40%;
 }
 
 @-webkit-keyframes fish {
