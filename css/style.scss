@@ -33,7 +33,6 @@ $desktop:1400px;
     }
   }
    
-   
   @mixin desktop {
     @media (min-width: #{$desktop}) {
       @content;
