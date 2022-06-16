@@ -1,5 +1,5 @@
 @charset "utf-8";
-.clFix:after{content:''; display:block; clear:both; overflow:auto;}
+
 /* 스킵메뉴 */
 #skip{z-index:9999;position:absolute;width:100%;height:auto;font-size:0;}
 #skip ul>li{width:100%;height:auto;font-size:0;}

@@ -43,3 +43,5 @@ button {border:0; vertical-align:middle; cursor:pointer; background:none;}
 .mt40 {margin-top: 40px !important;}
 .mt45 {margin-top: 45px !important;}
 .mt50 {margin-top: 50px !important;}
+
+.clFix:after{content:''; display:block; clear:both; overflow:auto;}
