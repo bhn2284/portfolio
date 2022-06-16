@@ -1,0 +1,33 @@
+@charset 'utf-8';
+
+//Break Point
+$yeoljeong:'RixYeoljeongdo_Regular';
+$blue:#1767ae;
+$light-blue:#dff1ff;
+$white:#fff;
+$yellow:#ffba00;
+$light-yellow:#fffff0;
+$gray:#f8f8f8;
+$black:#000;
+$tablet:768px;
+$laptop:1020px;
+$desktop:1400px;
+
+//Mixins
+@mixin tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+   
+  @mixin laptop {
+    @media (min-width: ($tablet+1)) and (max-width: $laptop) {
+      @content;
+    }
+  }
+   
+  @mixin desktop {
+    @media (min-width: #{$desktop}) {
+      @content;
+    }
+  }
