@@ -1,5 +1,5 @@
 @charset "utf-8";
-// @import url(./variable.scss);
+@import url(./variable.scss);
 @font-face {
     font-family: 'RixYeoljeongdo_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/RixYeoljeongdo_Regular.woff') format('woff');
@@ -69,7 +69,6 @@ h2{
                 a{color:$yellow;}
             }
             a{color:$blue; font-weight:800;}
-            // &:nth-child(2).on a{color:#7ba1c7}
         }
     }
 }
@@ -92,10 +91,9 @@ h2{
         color:$white;
         -webkit-text-stroke:1px $blue;
         position:absolute;
-        width:100%;
         top:30%;
         left:10px;
-        // transform:translateY(-50%);
+        transform:translateY(-50%);
         text-align:left;
         z-index:1;
         animation:mainTxt 2s forwards;
@@ -365,4 +363,18 @@ h2{
     color:$white;
     font-size:14px;
     address{line-height:25px; position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
+}
+
+@include tablet{
+
+}
+
+@include laptop{
+    
+}
+
+@include desktop{
+    .home{
+        h1{font-size:60px;}
+    }
 }
