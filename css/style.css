@@ -285,7 +285,7 @@ h2 {
 }
 .about .about-box .profile {
   width: 300px;
-  height: 420px;
+  height: auto;
   float: left;
 }
 .about .about-box li, .about .about-box .content1 p {
@@ -314,7 +314,7 @@ h2 {
   font-size: 2rem;
 }
 .about .about-box .content1 ul {
-  margin-top: 90px;
+  margin-top: 115px;
 }
 .about .about-box .content2 {
   position: absolute;
@@ -635,11 +635,10 @@ h2 {
     width: 280px;
     height: 280px;
   }
-  .home h1 {
+  .home h1, .home h3 {
     left: 0;
   }
   .home h3 {
-    left: 0;
     bottom: 350px;
   }
   .home p {
@@ -650,8 +649,11 @@ h2 {
     padding: 70px 0 50px 0;
   }
   .about .about-box {
-    padding: 30px;
-    height: 700px;
+    padding: 70px 80px;
+    height: 730px;
+  }
+  .about .about-box .profile {
+    width: 280px;
   }
   .about .about-box li, .about .about-box .content1 p {
     font-size: 2rem;
@@ -660,58 +662,26 @@ h2 {
     display: flex;
     flex-direction: row;
   }
-  .about .about-box li span {
-    width: 100px;
-  }
   .about .about-box .content1 {
-    left: 30px;
-    bottom: 0;
+    left: 80px;
+    bottom: 70px;
     display: flex;
     flex-direction: row;
   }
   .about .about-box .content1 .about-me {
-    width: 300px;
+    width: 280px;
+    text-align: center;
   }
-  .about .about-box .content1 h3 {
-    font-size: 2.4rem;
-  }
-  .about .about-box .content1 .name {
-    font-size: 2rem;
+  .about .about-box .content1 ul {
+    margin: 0 0 0 80px;
   }
   .about .about-box .content2 {
-    display: none;
+    right: 90px;
   }
   .about .about-box .content2 ul:last-of-type {
-    margin-top: 60px;
+    margin-top: 40px;
   }
-  .about .about-box .content2 .skills {
-    width: 535px;
-    padding: 5px 0;
-    display: flex;
-    justify-content: space-between;
-  }
-  .about .about-box .content2 .skills li {
-    float: left;
-    flex-direction: column;
-    text-align: center;
-    width: 18%;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .about .about-box .content2 .skills li span {
-    padding-top: 5px;
-    font-size: 1.3rem;
-    width: 87px;
-    font-family: "Noto Sans";
-  }
-  .about .about-box .content2 .skills li img {
-    width: 55%;
-  }
-  .about .about-box .tit {
-    font-size: 2rem !important;
-    color: #ffba00;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+  .about .about-box .content2 .skills span {
+    font-size: 1.4rem !important;
   }
 }/*# sourceMappingURL=style.css.map */

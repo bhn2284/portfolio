@@ -199,7 +199,7 @@ h2{
         background:$white;
         .profile{
             width:300px;
-            height:420px;
+            height:auto;
             float:left;
         }
         li,.content1 p{font-size:1.7rem; line-height:25px;}
@@ -217,7 +217,7 @@ h2{
                 color:$yellow;
             }
             .name{font-weight:800; font-size:2rem;}
-            ul{margin-top:90px;}
+            ul{margin-top:115px;}
         }
         .content2{
             position:absolute;
@@ -410,53 +410,36 @@ h2{
     .logo{font-size:2rem;}
     .home{
         .circle{width:280px; height:280px;}
-        h1{left:0}
-        h3{left:0; bottom:350px;}
+        h1,h3{left:0}
+        h3{bottom:350px;}
         p{right:0;}
     }
     .about{
         h2{padding:70px 0 50px 0;}
         .about-box{
-            padding:30px;
-            height:700px;
+            padding:70px 80px;
+            height:730px;
+            .profile{width:280px;}
             li,.content1 p{font-size:2rem;}
             li{
                 display:flex; flex-direction: row;
-                span{width:100px;}
             }
             .content1{
-                left:30px;
-                bottom:0;
-                display: flex;
-                flex-direction: row; 
-                .about-me{width:300px;}                                        
-                h3{
-                    font-size:2.4rem;
-                }
-                .name{font-size:2rem;}
-                // ul{}
+                left:80px;
+                bottom:70px;
+                display:flex;
+                flex-direction:row; 
+                .about-me{width:280px; text-align: center;} 
+                ul{margin:0 0 0 80px;}
             }
             .content2{
-                display: none;
-                ul:last-of-type{margin-top:60px;}
-                .skills{
-                    width:535px;
-                    padding:5px 0;
-                    display:flex;
-                    justify-content:space-between;
-                    li{
-                        float:left;
-                        flex-direction:column;
-                        text-align:center;
-                        width:18%;
-                        align-items: center;
-                        justify-content:space-between;
-                        span{padding-top:5px; font-size:1.3rem; width:87px; font-family:'Noto Sans'}
-                        img{width:55%}
-                    }
-                }
+                right:90px;
+                ul:last-of-type{margin-top:40px;}
+                .skills span{font-size:1.4rem !important;}
             }
-            .tit{font-size:2rem !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px;}
         }
     }
+    // .project{
+
+    // }
 }
