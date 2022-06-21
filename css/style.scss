@@ -15,29 +15,21 @@ $yellow:#ffba00;
 $light-yellow:#fffff0;
 $gray:#f8f8f8;
 $black:#000;
-$tablet:768px;
-$laptop:1020px;
-$desktop:1400px;
+$mobile:900px;
+$tablet:1200px;
 
 //Mixins
 @mixin tablet {
-    @media (max-width: #{$tablet}) {
+    @media (max-width: $tablet) {
       @content;
     }
-  }
+}
+@mixin mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+}
    
-  @mixin laptop {
-    @media (max-width: $laptop) {
-      @content;
-    }
-  }
-   
-  @mixin desktop {
-    @media (max-width: $desktop) {
-      @content;
-    }
-  }
-
 //스크롤바
 body{overflow-y:scroll;}
 body::-webkit-scrollbar{width:16px;}
@@ -83,7 +75,7 @@ h2{
 }
 .gnb-menu{
     position:fixed; 
-    right:50px; 
+    right:40px; 
     top:0; 
     height:100%; 
     z-index:500;
@@ -240,7 +232,7 @@ h2{
                 }
             }
         }
-        .tit{font-size:2rem !important; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px;}
+        .tit{font-size:2rem; color:$yellow; font-weight:800; text-transform: uppercase; margin-bottom:15px;}
     }
 }
 
@@ -326,7 +318,6 @@ h2{
                     }
                     p{position:absolute; left:65px; bottom:-25px; font-family:'Noto Sans'; font-size:1.3rem;}
                 }
-                
             }
         }
     }
@@ -383,7 +374,6 @@ h2{
         }
     }
 }
-
 @keyframes fish{
 	0% {margin-left: -235px}
 	70% {margin-left: 100%;}
@@ -395,51 +385,108 @@ h2{
     font-size:1.4rem;
     address{line-height:25px; position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
 }
-
+//responsive
 @include tablet{
-
-}
-
-@include laptop{
-    
-}
-
-@include desktop{
     html{font-size:55%;}
-    .container{width:1200px;}
+    .container{max-width:1120px;}
     .logo{font-size:2rem;}
-    .home{
-        .circle{width:280px; height:280px;}
-        h1,h3{left:0}
-        h3{bottom:350px;}
-        p{right:0;}
+    #home{
+        .circle{width:250px; height:250px;}
+        h1,h3{left:60px}
+        h1{font-size:9rem; top:32%}
+        h3{bottom:330px;}
+        p{right:60px; font-size:5.5rem;}
     }
-    .about{
+    #about{
         h2{padding:70px 0 50px 0;}
         .about-box{
-            padding:70px 80px;
-            height:730px;
+            padding:60px;
+            height:700px;
             .profile{width:280px;}
             li,.content1 p{font-size:2rem;}
-            li{
-                display:flex; flex-direction: row;
-            }
+            .tit{font-size:2.2rem}
             .content1{
-                left:80px;
-                bottom:70px;
+                left:60px;
+                bottom:60px;
                 display:flex;
                 flex-direction:row; 
                 .about-me{width:280px; text-align: center;} 
-                ul{margin:0 0 0 80px;}
+                ul{margin:0 0 0 48px;}
             }
             .content2{
-                right:90px;
-                ul:last-of-type{margin-top:40px;}
-                .skills span{font-size:1.4rem !important;}
+                right:60px;
+                ul:last-of-type{margin-top:35px;}
+                .skills span{font-size:1.4rem}
             }
         }
     }
-    // .project{
-
-    // }
+    #project{
+        .name{
+            li{margin-right:10px;}
+        }
+        .view{
+            .project-content{width:460px}
+            p,h4,.view-btn,.process-btn{font-size:1.95rem;}
+            .moniter{
+                top:30px; width:500px; height:445px; 
+                a{top:21px; left:22px; width:456px; height:273px;}
+                p{font-size:1.5rem; left:5px; bottom:60px;}
+            }
+            .phone{
+                right:0; width:500px;
+                .phone1,.phone2{
+                    top:-20px; 
+                    width:240px; height:478px;
+                }
+                .phone2{
+                    a{top:29px; left:17px; width:206px; height:405px;}
+                    p{bottom:-20px; left:32px; font-size:1.5rem;}
+                }
+                
+            }
+        }
+    }
+    #contact{
+        .contact-info{right:60px;}
+        ul{bottom:20px;}
+    }
+}
+@include mobile{
+    .gnb-menu{right:30px}
+    .container{width:840px;}
+    #home{
+        .circle{top:18%}
+        h1{top:38%; font-size:7rem}
+        p{font-size:4.2rem}
+    }
+    #about{
+        .about-box{
+            padding:40px;
+            height:750px;
+            .profile{width:240px;}
+            .content1{
+                left:330px;
+                top:40px;
+                display:block;
+                .about-me{text-align:left} 
+                ul{margin:40px 0;}
+            }
+            .content2{
+                left:40px;
+                bottom:40px;
+                ul:last-of-type{margin-top:30px;}
+                .skills{
+                    &:first-of-type{margin-bottom:5px;}
+                    span{display:none;}
+                }
+            }
+        }
+    }
+    #project{
+        .name{text-align: center; margin-bottom:80px;}
+        .view{
+            .project-content{margin:0 auto; width:550px;}
+        }
+        .moniter,.phone{display: none;}
+    }
 }
