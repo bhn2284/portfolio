@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb:hover{background-color:$yellow}
 #project{position:relative; height:100vh; min-height:969px; overflow: hidden;}
 #contact{position:relative; height:93vh; overflow: hidden; background-color:$light-yellow;}
 #footer{position:relative; height:7vh; background:$yellow;}
-.container{max-width:1440px; padding:0 60px; margin:0 auto; position:relative; height:inherit;}
+.container{width:1320px; margin:0 auto; position:relative; height:inherit;}
 h1,h2,h3,.logo,.home p,.tit,.contact-info a{font-family:$yeoljeong;}
 
 h2{
@@ -117,7 +117,7 @@ h2{
         -webkit-text-stroke:1px $blue;
         position:absolute;
         top:27%;
-        left:10px;  
+        left:-60px;  
         text-align:left;
         z-index:1;
         animation:mainTxt 2s forwards;
@@ -126,7 +126,7 @@ h2{
         to{text-shadow: $blue -0px 0px, $blue -1px 1px, $blue -2px 2px, $blue -3px 3px, $blue -4px 4px, $blue -5px 5px, $blue -6px 6px, $blue -7px 7px, $blue -8px 8px, $blue -9px 9px, $blue -10px 10px, $blue -11px 11px, $blue -12px 12px, $blue -13px 13px, $blue -14px 14px, $blue -15px 15px;}
         from{text-shadow:$blue -0px 0px;}
     }
-    h3{position:absolute; bottom:300px; left:10px; text-transform: uppercase; color:$yellow; font-size:1.8rem;}
+    h3{position:absolute; bottom:32%; left:-60px; text-transform: uppercase; color:$yellow; font-size:1.8rem;}
     p{
         font-size:6rem;
         color:$blue;
@@ -242,7 +242,9 @@ h2{
     .name{
         font-size:2rem;
         margin-bottom:40px;
-        li{display: inline-block; margin-right:15px;
+        li{
+            display: inline-block;
+            &:not(:last-child){margin-right:15px;}
             a{
                 padding:7px; 
                 border-radius:20px;
@@ -331,7 +333,7 @@ h2{
         margin-left:-235px;
         position:absolute;
         animation: fish 24s infinite linear;
-        bottom:40%;
+        bottom:36%;
     }
     h2{text-align: left; padding:180px 0 30px 0;}
     .contact-wrap{
@@ -349,7 +351,6 @@ h2{
             }
             a{
                 display: block;
-                float: right;
                 color:$yellow;
                 font-weight:100;
                 font-size:1.8rem;
@@ -385,17 +386,20 @@ h2{
     font-size:1.4rem;
     address{line-height:25px; position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
 }
+
 //responsive
 @include tablet{
-    html{font-size:55%;}
-    .container{max-width:1120px;}
-    .logo{font-size:2rem;}
+    .gnb-menu{
+        right:25px;
+        .gnb{font-size:1.8rem}
+    }
+    .container{width:1000px;}
     #home{
         .circle{width:250px; height:250px;}
-        h1,h3{left:60px}
-        h1{font-size:9rem; top:32%}
-        h3{bottom:330px;}
-        p{right:60px; font-size:5.5rem;}
+        h1,h3{left:0}
+        h1{font-size:8rem; top:32%}
+        h3{bottom:34%;}
+        p{right:0; font-size:4.8rem;}
     }
     #about{
         h2{padding:70px 0 50px 0;}
@@ -403,34 +407,33 @@ h2{
             padding:60px;
             height:700px;
             .profile{width:280px;}
-            li,.content1 p{font-size:2rem;}
-            .tit{font-size:2.2rem}
             .content1{
                 left:60px;
                 bottom:60px;
                 display:flex;
                 flex-direction:row; 
-                .about-me{width:280px; text-align: center;} 
-                ul{margin:0 0 0 48px;}
+                .about-me{width:280px; text-align:center;} 
+                ul{margin:0 0 0 65px;}
             }
             .content2{
                 right:60px;
                 ul:last-of-type{margin-top:35px;}
-                .skills span{font-size:1.4rem}
             }
         }
     }
     #project{
         .name{
-            li{margin-right:10px;}
+            li{
+                font-size:1.8rem;
+                &:not(:last-child){margin-right:10px;}
+            }
         }
         .view{
             .project-content{width:460px}
-            p,h4,.view-btn,.process-btn{font-size:1.95rem;}
             .moniter{
-                top:30px; width:500px; height:445px; 
+                top:20px; width:500px; height:445px; 
                 a{top:21px; left:22px; width:456px; height:273px;}
-                p{font-size:1.5rem; left:5px; bottom:60px;}
+                p{left:5px; bottom:60px;}
             }
             .phone{
                 right:0; width:500px;
@@ -440,24 +443,23 @@ h2{
                 }
                 .phone2{
                     a{top:29px; left:17px; width:206px; height:405px;}
-                    p{bottom:-20px; left:32px; font-size:1.5rem;}
+                    p{bottom:-20px; left:32px;}
                 }
                 
             }
         }
     }
     #contact{
-        .contact-info{right:60px;}
-        ul{bottom:20px;}
+        .contact-text p, .contact-title{font-size:2rem}
+        ul{bottom:10px;}
     }
 }
 @include mobile{
-    .gnb-menu{right:30px}
-    .container{width:840px;}
+    .container{width:720px;}
     #home{
         .circle{top:18%}
-        h1{top:38%; font-size:7rem}
-        p{font-size:4.2rem}
+        h1{top:38%; font-size:6.5rem}
+        p{font-size:3.6rem;}
     }
     #about{
         .about-box{
@@ -483,10 +485,18 @@ h2{
         }
     }
     #project{
-        .name{text-align: center; margin-bottom:80px;}
+        .name{
+            text-align: center; margin-bottom:70px;
+            li:not(:last-child){margin-right:30px;}
+        }
         .view{
-            .project-content{margin:0 auto; width:550px;}
+            .project-content{margin:0 auto; width:580px;}
         }
         .moniter,.phone{display: none;}
+    }
+    #contact{
+        .contact-text p, .contact-title{font-size:1.9rem; word-break:keep-all;}
+        .contact-info{left:0;}
+        ul{bottom:10px;}
     }
 }

@@ -74,8 +74,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .container {
-  max-width: 1440px;
-  padding: 0 60px;
+  width: 1320px;
   margin: 0 auto;
   position: relative;
   height: inherit;
@@ -169,7 +168,7 @@ h2 {
   -webkit-text-stroke: 1px #1767ae;
   position: absolute;
   top: 27%;
-  left: 10px;
+  left: -60px;
   text-align: left;
   z-index: 1;
   -webkit-animation: mainTxt 2s forwards;
@@ -193,8 +192,8 @@ h2 {
 }
 .home h3 {
   position: absolute;
-  bottom: 300px;
-  left: 10px;
+  bottom: 32%;
+  left: -60px;
   text-transform: uppercase;
   color: #ffba00;
   font-size: 1.8rem;
@@ -367,6 +366,8 @@ h2 {
 }
 .project .name li {
   display: inline-block;
+}
+.project .name li:not(:last-child) {
   margin-right: 15px;
 }
 .project .name li a {
@@ -533,7 +534,7 @@ h2 {
   position: absolute;
   -webkit-animation: fish 24s infinite linear;
           animation: fish 24s infinite linear;
-  bottom: 40%;
+  bottom: 36%;
 }
 .contact h2 {
   text-align: left;
@@ -555,7 +556,6 @@ h2 {
 }
 .contact .contact-wrap .contact-info a {
   display: block;
-  float: right;
   color: #ffba00;
   font-weight: 100;
   font-size: 1.8rem;
@@ -619,16 +619,15 @@ h2 {
 }
 
 @media (max-width: 1200px) {
-  html {
-    font-size: 55%;
+  .gnb-menu {
+    right: 25px;
+  }
+  .gnb-menu .gnb {
+    font-size: 1.8rem;
   }
 
   .container {
-    max-width: 1120px;
-  }
-
-  .logo {
-    font-size: 2rem;
+    width: 1000px;
   }
 
   #home .circle {
@@ -636,18 +635,18 @@ h2 {
     height: 250px;
   }
   #home h1, #home h3 {
-    left: 60px;
+    left: 0;
   }
   #home h1 {
-    font-size: 9rem;
+    font-size: 8rem;
     top: 32%;
   }
   #home h3 {
-    bottom: 330px;
+    bottom: 34%;
   }
   #home p {
-    right: 60px;
-    font-size: 5.5rem;
+    right: 0;
+    font-size: 4.8rem;
   }
 
   #about h2 {
@@ -660,12 +659,6 @@ h2 {
   #about .about-box .profile {
     width: 280px;
   }
-  #about .about-box li, #about .about-box .content1 p {
-    font-size: 2rem;
-  }
-  #about .about-box .tit {
-    font-size: 2.2rem;
-  }
   #about .about-box .content1 {
     left: 60px;
     bottom: 60px;
@@ -677,7 +670,7 @@ h2 {
     text-align: center;
   }
   #about .about-box .content1 ul {
-    margin: 0 0 0 48px;
+    margin: 0 0 0 65px;
   }
   #about .about-box .content2 {
     right: 60px;
@@ -685,21 +678,18 @@ h2 {
   #about .about-box .content2 ul:last-of-type {
     margin-top: 35px;
   }
-  #about .about-box .content2 .skills span {
-    font-size: 1.4rem;
-  }
 
   #project .name li {
+    font-size: 1.8rem;
+  }
+  #project .name li:not(:last-child) {
     margin-right: 10px;
   }
   #project .view .project-content {
     width: 460px;
   }
-  #project .view p, #project .view h4, #project .view .view-btn, #project .view .process-btn {
-    font-size: 1.95rem;
-  }
   #project .view .moniter {
-    top: 30px;
+    top: 20px;
     width: 500px;
     height: 445px;
   }
@@ -710,7 +700,6 @@ h2 {
     height: 273px;
   }
   #project .view .moniter p {
-    font-size: 1.5rem;
     left: 5px;
     bottom: 60px;
   }
@@ -732,23 +721,18 @@ h2 {
   #project .view .phone .phone2 p {
     bottom: -20px;
     left: 32px;
-    font-size: 1.5rem;
   }
 
-  #contact .contact-info {
-    right: 60px;
+  #contact .contact-text p, #contact .contact-title {
+    font-size: 2rem;
   }
   #contact ul {
-    bottom: 20px;
+    bottom: 10px;
   }
 }
 @media (max-width: 900px) {
-  .gnb-menu {
-    right: 30px;
-  }
-
   .container {
-    width: 840px;
+    width: 720px;
   }
 
   #home .circle {
@@ -756,10 +740,10 @@ h2 {
   }
   #home h1 {
     top: 38%;
-    font-size: 7rem;
+    font-size: 6.5rem;
   }
   #home p {
-    font-size: 4.2rem;
+    font-size: 3.6rem;
   }
 
   #about .about-box {
@@ -796,13 +780,27 @@ h2 {
 
   #project .name {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 70px;
+  }
+  #project .name li:not(:last-child) {
+    margin-right: 30px;
   }
   #project .view .project-content {
     margin: 0 auto;
-    width: 550px;
+    width: 580px;
   }
   #project .moniter, #project .phone {
     display: none;
+  }
+
+  #contact .contact-text p, #contact .contact-title {
+    font-size: 1.9rem;
+    word-break: keep-all;
+  }
+  #contact .contact-info {
+    left: 0;
+  }
+  #contact ul {
+    bottom: 10px;
   }
 }/*# sourceMappingURL=style.css.map */

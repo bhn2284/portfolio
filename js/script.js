@@ -2,7 +2,7 @@
 $(function(){
     const box = new Array();
 
-    for(var i=0; i<750; i++){
+    for(var i=0; i<720; i++){
         box[i] = '#dff1ff' +' '+ -i + 'px ' + i + 'px';
     }
 
