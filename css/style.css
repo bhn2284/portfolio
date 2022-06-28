@@ -161,12 +161,14 @@ h2 {
   box-shadow: 0;
   transition: box-shadow 1s ease-in-out;
 }
+.home h1, .home h3, .home p {
+  position: absolute;
+}
 .home h1 {
   font-size: 10rem;
   line-height: 120%;
   color: #fff;
   -webkit-text-stroke: 1px #1767ae;
-  position: absolute;
   top: 27%;
   left: -60px;
   text-align: left;
@@ -191,7 +193,6 @@ h2 {
   }
 }
 .home h3 {
-  position: absolute;
   bottom: 32%;
   left: -60px;
   text-transform: uppercase;
@@ -202,8 +203,7 @@ h2 {
   font-size: 6rem;
   color: #1767ae;
   text-align: right;
-  position: absolute;
-  right: -70px;
+  right: -60px;
   word-wrap: break-word;
   text-transform: uppercase;
   bottom: 15%;
@@ -371,7 +371,7 @@ h2 {
   margin-right: 15px;
 }
 .project .name li a {
-  padding: 7px;
+  padding: 10px;
   border-radius: 20px;
   border: 1px solid #dff1ff;
   box-shadow: 0 4px #dff1ff;
@@ -502,7 +502,7 @@ h2 {
 }
 .project .view li .phone .phone2 {
   right: 0;
-  background: url(../img/phone1.png) no-repeat;
+  background: url(../img/phone.png) no-repeat;
   background-size: 100%;
 }
 .project .view li .phone .phone2 a {
@@ -740,10 +740,13 @@ h2 {
   }
   #home h1 {
     top: 38%;
-    font-size: 6.5rem;
+    font-size: 6.7rem;
+  }
+  #home h3 {
+    bottom: 33%;
   }
   #home p {
-    font-size: 3.6rem;
+    font-size: 4rem;
   }
 
   #about .about-box {
