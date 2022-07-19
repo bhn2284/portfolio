@@ -317,7 +317,7 @@ h2{
                         overflow: hidden;
                         img{position:relative; top:0; left:0;}
                     }
-                    p{position:absolute; left:65px; bottom:-25px; font-family:'Noto Sans'; font-size:1.3rem;}
+                    p{position:absolute; left:60px; bottom:-25px; font-family:'Noto Sans'; font-size:1.3rem;}
                 }
             }
         }
@@ -383,7 +383,7 @@ h2{
     text-align:center;
     color:$white;
     font-size:1.4rem;
-    address{line-height:25px; position:absolute; bottom:0; left:50%; transform: translateX(-50%);}
+    address{margin:10px 0; width:450px; line-height:25px; position:absolute; left:50%; transform: translateX(-50%);}
 }
 
 //responsive
@@ -495,7 +495,7 @@ h2{
         .moniter,.phone{display: none;}
     }
     #contact{
-        .contact-text p, .contact-title{font-size:1.9rem; word-break:keep-all;}
+        .contact-text p, .contact-title{font-size:1.9rem; word-break:keep-all; width:700px}
         .contact-info{left:0;}
         ul{bottom:10px;}
     }

@@ -520,7 +520,7 @@ h2 {
 }
 .project .view li .phone .phone2 p {
   position: absolute;
-  left: 65px;
+  left: 60px;
   bottom: -25px;
   font-family: "Noto Sans";
   font-size: 1.3rem;
@@ -611,9 +611,10 @@ h2 {
   font-size: 1.4rem;
 }
 .footer address {
+  margin: 10px 0;
+  width: 450px;
   line-height: 25px;
   position: absolute;
-  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -625,11 +626,9 @@ h2 {
   .gnb-menu .gnb {
     font-size: 1.8rem;
   }
-
   .container {
     width: 1000px;
   }
-
   #home .circle {
     width: 250px;
     height: 250px;
@@ -648,7 +647,6 @@ h2 {
     right: 0;
     font-size: 4.8rem;
   }
-
   #about h2 {
     padding: 70px 0 50px 0;
   }
@@ -678,7 +676,6 @@ h2 {
   #about .about-box .content2 ul:last-of-type {
     margin-top: 35px;
   }
-
   #project .name li {
     font-size: 1.8rem;
   }
@@ -722,7 +719,6 @@ h2 {
     bottom: -20px;
     left: 32px;
   }
-
   #contact .contact-text p, #contact .contact-title {
     font-size: 2rem;
   }
@@ -734,7 +730,6 @@ h2 {
   .container {
     width: 720px;
   }
-
   #home .circle {
     top: 18%;
   }
@@ -748,7 +743,6 @@ h2 {
   #home p {
     font-size: 4rem;
   }
-
   #about .about-box {
     padding: 40px;
     height: 750px;
@@ -780,7 +774,6 @@ h2 {
   #about .about-box .content2 .skills span {
     display: none;
   }
-
   #project .name {
     text-align: center;
     margin-bottom: 70px;
@@ -795,10 +788,10 @@ h2 {
   #project .moniter, #project .phone {
     display: none;
   }
-
   #contact .contact-text p, #contact .contact-title {
     font-size: 1.9rem;
     word-break: keep-all;
+    width: 700px;
   }
   #contact .contact-info {
     left: 0;
